@@ -1,0 +1,27 @@
+{
+  "name": "056-thoughtworks-academy-recruiting-system",
+  "version": "1.0.0",
+  "description": "-\t进入条件：输入地址即可 -\t内容：一个表单，里面的必填项有手机号，邮箱，密码，验证码(手机发送)，姓名，学校，年级",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linwenjun/recruiting-system.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linwenjun/recruiting-system/issues"
+  },
+  "homepage": "https://github.com/linwenjun/recruiting-system#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-less": "^3.0.3"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.5"
+  }
+}

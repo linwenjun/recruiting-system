@@ -7,6 +7,12 @@ var buffer = require('vinyl-buffer');
 var uglify = require('gulp-uglify');
 var ejs = require("gulp-ejs");
 
+gulp.task('ejs', function() {
+  gulp.src("./templates/*.ejs")
+    .pipe(ejs())
+    .pipe(gulp.dest('./'));
+})
+
 gulp.task('connect', function() {
   connect.server({
     root: './',
@@ -16,12 +22,12 @@ gulp.task('connect', function() {
 
 gulp.task('browserify', function() {
   var b = browserify({
-    entries: './source/scripts/main.js',
+    entries: './source/scripts/index.js',
     debug: true
   });
 
   return b.bundle()
-    .pipe(source('main.js'))
+    .pipe(source('index.js'))
     // .pipe(buffer())
     // .pipe(uglify())
     .pipe(gulp.dest('./public/scripts/'));
@@ -46,5 +52,9 @@ gulp.task('watch-less', function() {
   gulp.watch(['./source/less/*.less'], ['less'])
 })
 
-gulp.task('build', ['less'])
-gulp.task('default', ['connect', 'watch', 'watch-less'])
+gulp.task('watch-ejs', function() {
+  gulp.watch(['./templates/**/*.ejs'], ['ejs'])
+})
+
+gulp.task('build', ['ejs', 'less', 'browserify']);
+gulp.task('default', ['connect', 'watch', 'watch-less', 'watch-ejs'])

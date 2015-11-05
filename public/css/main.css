@@ -4,6 +4,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import "../../node_modules/onepage-scroll/onepage-scroll.css";
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6763,6 +6764,66 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+#index-div section {
+  overflow: hidden;
+}
+#index-div .first-page .head {
+  padding: 0 10px;
+  height: 80px;
+  background: white;
+  overflow: hidden;
+}
+#index-div .first-page .head h1 span {
+  color: #19ABB5;
+}
+#index-div .first-page .content {
+  height: 100%;
+  background-image: url(../images/bg.jpg);
+  background-size: 100% auto;
+}
+#index-div .first-page .statement {
+  height: 100%;
+  margin: 0 auto;
+  width: 1000px;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+#index-div .first-page .statement h2,
+#index-div .first-page .statement h3 {
+  color: #FFF;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 3em;
+}
+#index-div .first-page .statement h2 {
+  font-size: 4em;
+  margin: 4em 0 1em 0;
+}
+#index-div .first-page .statement h3 {
+  width: 600px;
+}
+#index-div .first-page .statement a.btn {
+  display: block;
+  margin: 0 auto;
+  width: 16em;
+}
+#index-div .second-page {
+  padding-top: 40px;
+  color: #19ABB5;
+}
+#index-div .second-page .glyphicon {
+  font-size: 60px;
+}
+#index-div .second-page h2,
+#index-div .second-page h3,
+#index-div .second-page h4,
+#index-div .second-page h5 {
+  font-weight: normal;
+  line-height: 1.4em;
+}
+#index-div .second-page .row {
+  margin-top: 15px;
 }
 #head {
   background: #0F9D58;

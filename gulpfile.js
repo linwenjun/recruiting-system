@@ -28,4 +28,5 @@ gulp.task('watch-less', function() {
   gulp.watch(['./source/less/*.less'], ['less'])
 })
 
+gulp.task('build', ['less'])
 gulp.task('default', ['connect', 'watch', 'watch-less'])

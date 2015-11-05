@@ -1,12 +1,30 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 var connect = require('gulp-connect');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
+var uglify = require('gulp-uglify');
+var ejs = require("gulp-ejs");
 
 gulp.task('connect', function() {
   connect.server({
     root: './',
     livereload: true
   });
+});
+
+gulp.task('browserify', function() {
+  var b = browserify({
+    entries: './source/scripts/main.js',
+    debug: true
+  });
+
+  return b.bundle()
+    .pipe(source('main.js'))
+    // .pipe(buffer())
+    // .pipe(uglify())
+    .pipe(gulp.dest('./public/scripts/'));
 });
 
 gulp.task('html', function () {

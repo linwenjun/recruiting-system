@@ -7,32 +7,6 @@ var buffer = require('vinyl-buffer');
 var uglify = require('gulp-uglify');
 var ejs = require("gulp-ejs");
 
-gulp.task('ejs', function() {
-  gulp.src("./templates/*.ejs")
-    .pipe(ejs())
-    .pipe(gulp.dest('./'));
-})
-
-gulp.task('connect', function() {
-  connect.server({
-    root: './',
-    livereload: true
-  });
-});
-
-gulp.task('browserify', function() {
-  var b = browserify({
-    entries: './source/scripts/index.js',
-    debug: true
-  });
-
-  return b.bundle()
-    .pipe(source('index.js'))
-    // .pipe(buffer())
-    // .pipe(uglify())
-    .pipe(gulp.dest('./public/scripts/'));
-});
-
 gulp.task('html', function () {
   gulp.src('./index.html')
     .pipe(connect.reload());

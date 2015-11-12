@@ -1,4 +1,5 @@
 @blue: #19ABB5;
+@dark-yello: #B39408;
 
 #index-div {
   section {
@@ -71,6 +72,45 @@
     }
     .row {
       margin-top: 15px;
+    }
+  }
+
+  .third-page {
+    h1 {
+      margin: 75px 0;
+    }
+
+    .content {
+      background: @dark-yello;
+      height: 100%;
+    }
+    .left-avatar, .right-avatar {
+      margin: 0 auto;
+      height: 200px;
+      width: 200px;
+      border-radius: 100%;
+      margin-top: 60px;
+    }
+
+    .left-avatar {
+      background-image: url(../images/wh.png);
+      background-size: 100% auto;
+    }
+
+    .right-avatar {
+      background-image: url(../images/zzh.png);
+      background-size: auto 100%;
+    }
+
+    .my-word {
+      color: #FFF;
+      font-style: italic;
+      font-size: 20px;
+      padding-top: 30px;
+    }
+
+    .my-name {
+      color: #FFF;
     }
   }
 }

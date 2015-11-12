@@ -6914,6 +6914,38 @@ html {
 #index-div .second-page .row {
   margin-top: 15px;
 }
+#index-div .third-page h1 {
+  margin: 75px 0;
+}
+#index-div .third-page .content {
+  background: #B39408;
+  height: 100%;
+}
+#index-div .third-page .left-avatar,
+#index-div .third-page .right-avatar {
+  margin: 0 auto;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  margin-top: 60px;
+}
+#index-div .third-page .left-avatar {
+  background-image: url(../images/wh.png);
+  background-size: 100% auto;
+}
+#index-div .third-page .right-avatar {
+  background-image: url(../images/zzh.png);
+  background-size: auto 100%;
+}
+#index-div .third-page .my-word {
+  color: #FFF;
+  font-style: italic;
+  font-size: 20px;
+  padding-top: 30px;
+}
+#index-div .third-page .my-name {
+  color: #FFF;
+}
 #head {
   background: #0F9D58;
   padding-top: 15px;

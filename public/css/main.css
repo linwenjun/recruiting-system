@@ -6946,6 +6946,40 @@ html {
 #index-div .third-page .my-name {
   color: #FFF;
 }
+#start-div header nav {
+  background-color: #0F9D58;
+  min-height: 70px;
+}
+#start-div header ul a {
+  color: white;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+#start-div header .navbar-header {
+  margin-top: 10px;
+}
+#start-div header .navbar-brand {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-left: 30px;
+  font-size: 20px;
+  color: white;
+}
+#start-div article section p {
+  text-align: center;
+}
+#start-div article .title p {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+#start-div article .content p {
+  width: 70%;
+  margin: 0 auto 100px auto;
+}
+#start-div article .start-button {
+  text-align: center;
+  width: 20%;
+  margin: 0 auto;
+}
 #head {
   background: #0F9D58;
   padding-top: 15px;

@@ -11,7 +11,6 @@
           </div>
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#">个人中心</a></li>
               <li><a href="#">退出</a></li>
@@ -22,19 +21,17 @@
     </header>
     <!-- end header -->
 
-
     <!-- sidebar -->
     <div id="sidebar">
       <div class="description">
         <h2>逻辑题</h2>
-        <p>
-          <ol>
-            <li>
-              请仔细阅读内容，并在规定的时间段内答完题目
-            </li>
-          </ol>
-        </p>
+        <ol>
+          <li>
+            请仔细阅读内容，并在规定的时间段内答完题目
+          </li>
+        </ol>
       </div>
+
       <div class="tip">
         <p class="remain-time">
           您还有90分钟
@@ -45,38 +42,48 @@
       </div>
 
       <div class="select">
-        <button type="button" name="button">上一题</button>
-        <button type="button" name="button">下一题</button>
-      </div>
-
-      <div class="confirm">
-        <button type="button" name="button">交卷</button>
+        <button type="button" class="btn btn-warning" name="button">上一题</button>
+        <button type="button" class="btn btn-warning" name="button">下一题</button>
       </div>
     </div>
     <!--end sidebar  -->
 
     <!-- content -->
     <div id="content">
-      <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ol>
+      <div class="title">
+        <div class="box">
+          <ol>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+          </ol>
+        </div>
+      </div>
 
       <div class="result">
-        <span>
-          结果是：
-        </span>
-        <input type="text" value="">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="inputresult" class="col-md-10 control-label">结果为：</label>
+            <div class="col-md-2">
+              <input type="text" class="form-control" id="inputresult">
+            </div>
+          </div>
+        </form>
       </div>
     </div>
     <!--end content  -->
+
+    <!-- confirm -->
+    <div class="confirm">
+      <button type="button" class="btn btn-danger" name="button">交卷</button>
+    </div>
+    <!-- end confirm  -->
 
   </div>

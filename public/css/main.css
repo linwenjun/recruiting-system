@@ -6980,6 +6980,97 @@ html {
   width: 20%;
   margin: 0 auto;
 }
+#answer-div header nav {
+  background-color: #0F9D58;
+  min-height: 70px;
+}
+#answer-div header ul a {
+  color: white;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+#answer-div header .navbar {
+  margin-bottom: 0;
+}
+#answer-div header .navbar-header {
+  margin-top: 10px;
+}
+#answer-div header .navbar-brand {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-left: 30px;
+  font-size: 20px;
+  color: white;
+}
+#answer-div #sidebar {
+  float: left;
+  width: 21%;
+  height: 600px;
+  border: 2px solid #1d98d9;
+}
+#answer-div #sidebar .description {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+#answer-div #sidebar .description h2 {
+  text-align: center;
+  margin-top: 0;
+}
+#answer-div #sidebar .tip {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding-top: 30px;
+  text-align: center;
+}
+#answer-div #sidebar .select {
+  margin-bottom: 40px;
+}
+#answer-div #sidebar .select button {
+  display: block;
+  margin: 10px auto;
+  width: 150px;
+}
+#answer-div #content {
+  float: right;
+  width: 79%;
+}
+#answer-div #content .title {
+  height: 650px;
+}
+#answer-div #content .title .box {
+  width: 450px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+#answer-div #content .title .box ol {
+  padding: 0;
+}
+#answer-div #content .title .box li {
+  list-style-type: none;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+#answer-div #content .result {
+  text-align: right;
+}
+#answer-div #content .result input {
+  width: 60px;
+}
+#answer-div .confirm {
+  float: left;
+  width: 21%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border: 2px solid #1d98d9;
+}
+#answer-div .confirm button {
+  display: block;
+  margin: 10px auto;
+  width: 150px;
+}
 #head {
   background: #0F9D58;
   padding-top: 15px;

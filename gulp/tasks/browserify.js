@@ -8,8 +8,13 @@ gulp.task('browserify', function() {
       .pipe(source('index.js'))
       .pipe(gulp.dest('./public/scripts/'));
 
-  return browserify('./source/scripts/logon.js')
+  browserify('./source/scripts/logon.js')
       .bundle()
       .pipe(source('logon.js'))
+      .pipe(gulp.dest('./public/scripts/'));
+
+  return browserify('./source/scripts/start.js')
+      .bundle()
+      .pipe(source('start.js'))
       .pipe(gulp.dest('./public/scripts/'));
 });

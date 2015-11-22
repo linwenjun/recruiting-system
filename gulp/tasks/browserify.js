@@ -13,8 +13,13 @@ gulp.task('browserify', function() {
       .pipe(source('logon.js'))
       .pipe(gulp.dest('./public/scripts/'));
 
-  return browserify('./source/scripts/start.js')
+  browserify('./source/scripts/start.js')
       .bundle()
       .pipe(source('start.js'))
       .pipe(gulp.dest('./public/scripts/'));
+
+    return browserify('./source/scripts/answer.js')
+        .bundle()
+        .pipe(source('answer.js'))
+        .pipe(gulp.dest('./public/scripts/'));
 });

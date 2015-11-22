@@ -1,18 +1,15 @@
 var gulp = require('gulp');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
-var uglify = require('gulp-uglify');
 
 gulp.task('browserify', function() {
-  var b = browserify({
-    entries: './source/scripts/index.js',
-    debug: true
-  });
+  browserify('./source/scripts/index.js')
+      .bundle()
+      .pipe(source('index.js'))
+      .pipe(gulp.dest('./public/scripts/'));
 
-  return b.bundle()
-    .pipe(source('index.js'))
-    // .pipe(buffer())
-    // .pipe(uglify())
-    .pipe(gulp.dest('./public/scripts/'));
+  return browserify('./source/scripts/logon.js')
+      .bundle()
+      .pipe(source('logon.js'))
+      .pipe(gulp.dest('./public/scripts/'));
 });

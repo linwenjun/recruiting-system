@@ -7071,6 +7071,51 @@ html {
   margin: 10px auto;
   width: 150px;
 }
+#progress-div header nav {
+  background-color: #0F9D58;
+  min-height: 70px;
+}
+#progress-div header ul a {
+  color: white;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+#progress-div header .navbar {
+  margin-bottom: 0;
+}
+#progress-div header .navbar-header {
+  margin-top: 10px;
+}
+#progress-div header .navbar-brand {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-left: 30px;
+  font-size: 20px;
+  color: white;
+}
+#progress-div article {
+  margin: 150px auto;
+  width: 70%;
+}
+#progress-div article #progress-bar {
+  width: 40%;
+}
+#progress-div article .goon-button {
+  text-align: center;
+  width: 20%;
+  margin: 100px auto 120px;
+}
+#progress-div article .status {
+  text-align: center;
+}
+#progress-div article .status .student-number {
+  display: inline-block;
+}
+#progress-div article .status .quiz-number {
+  display: inline-block;
+}
+#progress-div article .status .rank {
+  display: inline-block;
+}
 #head {
   background: #0F9D58;
   padding-top: 15px;

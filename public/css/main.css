@@ -6982,30 +6982,35 @@ html {
 }
 #answer-div header nav {
   background-color: #0F9D58;
-  min-height: 70px;
+  height: 70px;
 }
-#answer-div header ul a {
-  color: white;
-  margin-top: 10px;
-  margin-left: 5px;
+#answer-div header nav .brand {
+  display: inline-block;
+  margin-left: 70px;
 }
-#answer-div header .navbar {
-  margin-bottom: 0;
-}
-#answer-div header .navbar-header {
-  margin-top: 10px;
-}
-#answer-div header .navbar-brand {
+#answer-div header nav .brand strong {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-left: 30px;
-  font-size: 20px;
+  font-size: 25px;
   color: white;
+  line-height: 70px;
+}
+#answer-div header nav .header-right {
+  float: right;
+  display: inline-block;
+  margin-right: 50px;
+}
+#answer-div header nav .header-right a {
+  padding-left: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
 }
 #answer-div #sidebar {
   float: left;
   width: 21%;
-  height: 600px;
-  border: 2px solid #1d98d9;
+  background-color: #428493;
 }
 #answer-div #sidebar .description {
   padding-top: 20px;
@@ -7029,12 +7034,22 @@ html {
   margin: 10px auto;
   width: 150px;
 }
+#answer-div #sidebar .confirm {
+  padding: 30px  10px;
+  background-color: #e6eb14;
+}
+#answer-div #sidebar .confirm button {
+  display: block;
+  margin: 10px auto;
+  width: 150px;
+}
+#answer-div #sidebar,
+#answer-div #content {
+  height: 700px;
+}
 #answer-div #content {
   float: right;
   width: 79%;
-}
-#answer-div #content .title {
-  height: 650px;
 }
 #answer-div #content .title .box {
   width: 450px;
@@ -7054,22 +7069,11 @@ html {
   border: 1px solid black;
 }
 #answer-div #content .result {
+  margin-top: 500px;
   text-align: right;
 }
 #answer-div #content .result input {
   width: 60px;
-}
-#answer-div .confirm {
-  float: left;
-  width: 21%;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  border: 2px solid #1d98d9;
-}
-#answer-div .confirm button {
-  display: block;
-  margin: 10px auto;
-  width: 150px;
 }
 #progress-div header nav {
   background-color: #0F9D58;

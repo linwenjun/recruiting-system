@@ -2,31 +2,36 @@
   header {
     nav {
       background-color: @nice-green;
-      min-height: 70px;
-    }
-    ul a {
-      color: white;
-      margin-top: 10px;
-      margin-left: 5px;
-    }
-    .navbar {
-      margin-bottom: 0;
-    }
-    .navbar-header {
-      margin-top: 10px;
-    }
-    .navbar-brand {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      margin-left: 30px;
-      font-size: 20px;
-      color: white;
+      height: 70px;
+      .brand {
+        display: inline-block;
+        margin-left: 70px;
+        strong {
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-size: 25px;
+          color: white;
+          line-height: 70px;
+        }
+      }
+      .header-right {
+        float: right;
+        display: inline-block;
+        margin-right: 50px;
+        a {
+          padding-left: 10px;
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-size: 16px;
+          color: white;
+          line-height: 70px;
+          text-decoration: none;
+        }
+      }
     }
   }
   #sidebar {
     float: left;
     width: 21%;
-    height: 600px;
-    border: 2px solid rgb(29, 152, 217);
+    background-color: rgb(66, 132, 147);
     .description {
       padding-top: 20px;
       padding-bottom: 40px;
@@ -49,12 +54,24 @@
         width: 150px;
       }
     }
+    .confirm {
+      padding: 30px  10px;
+      background-color: rgb(230, 235, 20);
+      button {
+        display: block;
+        margin: 10px auto;
+        width: 150px;
+      }
+    }
+  }
+  #sidebar,
+  #content {
+    height: 700px;
   }
   #content {
     float: right;
     width: 79%;
     .title {
-      height: 650px;
       .box {
         width: 450px;
         margin: 0 auto;
@@ -74,22 +91,11 @@
       }
     }
     .result {
+      margin-top: 500px;
       text-align: right;
       input {
         width: 60px;
       }
-    }
-  }
-  .confirm {
-    float: left;
-    width: 21%;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    border: 2px solid rgb(29, 152, 217);
-    button {
-      display: block;
-      margin: 10px auto;
-      width: 150px;
     }
   }
 }

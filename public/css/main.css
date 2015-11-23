@@ -6854,6 +6854,33 @@ body.disabled-onepage-scroll,
 html {
   position: inherit;
 }
+#header nav {
+  background-color: #0F9D58;
+  height: 70px;
+}
+#header nav .brand {
+  display: inline-block;
+  margin-left: 70px;
+}
+#header nav .brand strong {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  color: white;
+  line-height: 70px;
+}
+#header nav .header-right {
+  float: right;
+  display: inline-block;
+  margin-right: 50px;
+}
+#header nav .header-right a {
+  padding-left: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+}
 #index-div section {
   overflow: hidden;
 }
@@ -6948,21 +6975,30 @@ html {
 }
 #start-div header nav {
   background-color: #0F9D58;
-  min-height: 70px;
+  height: 70px;
 }
-#start-div header ul a {
-  color: white;
-  margin-top: 10px;
-  margin-left: 5px;
+#start-div header nav .brand {
+  display: inline-block;
+  margin-left: 70px;
 }
-#start-div header .navbar-header {
-  margin-top: 10px;
-}
-#start-div header .navbar-brand {
+#start-div header nav .brand strong {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-left: 30px;
-  font-size: 20px;
+  font-size: 25px;
   color: white;
+  line-height: 70px;
+}
+#start-div header nav .header-right {
+  float: right;
+  display: inline-block;
+  margin-right: 50px;
+}
+#start-div header nav .header-right a {
+  padding-left: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
 }
 #start-div article section p {
   text-align: center;
@@ -7077,24 +7113,30 @@ html {
 }
 #progress-div header nav {
   background-color: #0F9D58;
-  min-height: 70px;
+  height: 70px;
 }
-#progress-div header ul a {
-  color: white;
-  margin-top: 10px;
-  margin-left: 5px;
+#progress-div header nav .brand {
+  display: inline-block;
+  margin-left: 70px;
 }
-#progress-div header .navbar {
-  margin-bottom: 0;
-}
-#progress-div header .navbar-header {
-  margin-top: 10px;
-}
-#progress-div header .navbar-brand {
+#progress-div header nav .brand strong {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-left: 30px;
-  font-size: 20px;
+  font-size: 25px;
   color: white;
+  line-height: 70px;
+}
+#progress-div header nav .header-right {
+  float: right;
+  display: inline-block;
+  margin-right: 50px;
+}
+#progress-div header nav .header-right a {
+  padding-left: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
 }
 #progress-div article {
   margin: 150px auto;

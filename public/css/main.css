@@ -7009,7 +7009,7 @@ html {
 }
 #start-div article .content p {
   width: 70%;
-  margin: 0 auto 100px auto;
+  margin: 0 auto 100px;
 }
 #start-div article .start-button {
   text-align: center;
@@ -7071,7 +7071,7 @@ html {
   width: 150px;
 }
 #answer-div #sidebar .confirm {
-  padding: 30px  10px;
+  padding: 30px 10px;
   background-color: #e6eb14;
 }
 #answer-div #sidebar .confirm button {

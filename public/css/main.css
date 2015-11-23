@@ -6854,26 +6854,26 @@ body.disabled-onepage-scroll,
 html {
   position: inherit;
 }
-#header nav {
+#header header nav {
   background-color: #0F9D58;
   height: 70px;
 }
-#header nav .brand {
+#header header nav .brand {
   display: inline-block;
   margin-left: 70px;
 }
-#header nav .brand strong {
+#header header nav .brand strong {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 25px;
   color: white;
   line-height: 70px;
 }
-#header nav .header-right {
+#header header nav .header-right {
   float: right;
   display: inline-block;
   margin-right: 50px;
 }
-#header nav .header-right a {
+#header header nav .header-right a {
   padding-left: 10px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;

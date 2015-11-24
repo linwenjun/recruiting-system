@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
+var glob = require('glob');
+var es = require('event-stream');
 
 gulp.task('browserify', function() {
   browserify('./source/scripts/index.js')
@@ -23,3 +25,17 @@ gulp.task('browserify', function() {
         .pipe(source('answer.js'))
         .pipe(gulp.dest('./public/scripts/'));
 });
+
+//gulp.task('browserify', function(done) {
+//    glob('./source/scripts/*.js', function(err, files) {
+//        if(err) done(err);
+//
+//        var tasks = files.map(function(entry) {
+//            return browserify({ entries: [entry] })
+//                .bundle()
+//                .pipe(source(entry))
+//                .pipe(gulp.dest('./public/scripts/'));
+//        });
+//        es.merge(tasks).on('end', done);
+//    })
+//});

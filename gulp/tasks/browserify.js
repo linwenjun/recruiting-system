@@ -20,10 +20,16 @@ gulp.task('browserify', function() {
       .pipe(source('start.js'))
       .pipe(gulp.dest('./public/scripts/'));
 
-    return browserify('./source/scripts/answer.js')
+    browserify('./source/scripts/answer.js')
         .bundle()
         .pipe(source('answer.js'))
         .pipe(gulp.dest('./public/scripts/'));
+
+    return browserify('./source/scripts/progress.js')
+        .bundle()
+        .pipe(source('progress.js'))
+        .pipe(gulp.dest('./public/scripts/'));
+
 });
 
 //gulp.task('browserify', function(done) {

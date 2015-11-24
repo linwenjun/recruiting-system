@@ -1,3 +1,7 @@
-/**
- * Created by Thoughtworks on 11/24/15.
- */
+var $ = global.jQuery = require('jquery');
+
+$(function(){
+    $('.goon-button').find('button').on('click',function(){
+        window.location.href='dojo.html';
+    });
+});

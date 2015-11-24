@@ -25,9 +25,14 @@ gulp.task('browserify', function() {
         .pipe(source('answer.js'))
         .pipe(gulp.dest('./public/scripts/'));
 
-    return browserify('./source/scripts/progress.js')
+    browserify('./source/scripts/progress.js')
         .bundle()
         .pipe(source('progress.js'))
+        .pipe(gulp.dest('./public/scripts/'));
+
+    return browserify('./source/scripts/dojo.js')
+        .bundle()
+        .pipe(source('dojo.js'))
         .pipe(gulp.dest('./public/scripts/'));
 
 });

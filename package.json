@@ -25,7 +25,6 @@
     "glob": "^6.0.1",
     "gulp": "^3.9.0",
     "gulp-connect": "^2.2.0",
-    "gulp-ejs": "^1.2.1",
     "gulp-less": "^3.0.3",
     "gulp-uglify": "^1.4.2",
     "vinyl-buffer": "^1.0.0",

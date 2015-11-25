@@ -1,10 +1,8 @@
 var gulp = require('./gulp')([
   'browserify',
   'connect',
-  'ejs',
   'html',
   'less',
-  'watch-ejs',
   'watch-less',
   'watch'
 ]);

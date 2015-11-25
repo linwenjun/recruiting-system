@@ -7267,6 +7267,11 @@ body {
   margin: 20px 0;
   border-right: 2px solid #EEE;
 }
+#register-div .register-form-container .welcome {
+  font-weight: normal;
+  color: #333;
+  margin: 15px 0;
+}
 #register-div .register-form-container .passport-safely {
   margin: 0;
   padding: 0;

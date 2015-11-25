@@ -1,0 +1,16 @@
+#start-div article section p {
+  text-align: center;
+}
+#start-div article .title p {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+#start-div article .content p {
+  width: 70%;
+  margin: 0 auto 100px;
+}
+#start-div article .start-button {
+  text-align: center;
+  width: 20%;
+  margin: 0 auto;
+}

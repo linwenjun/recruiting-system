@@ -1,0 +1,68 @@
+#answer-div #sidebar {
+  float: left;
+  width: 21%;
+  background-color: #428493;
+}
+#answer-div #sidebar .description {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+#answer-div #sidebar .description h2 {
+  text-align: center;
+  margin-top: 0;
+}
+#answer-div #sidebar .tip {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding-top: 30px;
+  text-align: center;
+}
+#answer-div #sidebar .select {
+  margin-bottom: 40px;
+}
+#answer-div #sidebar .select button {
+  display: block;
+  margin: 10px auto;
+  width: 150px;
+}
+#answer-div #sidebar .confirm {
+  padding: 30px 10px;
+  background-color: #e6eb14;
+}
+#answer-div #sidebar .confirm button {
+  display: block;
+  margin: 10px auto;
+  width: 150px;
+}
+#answer-div #sidebar,
+#answer-div #content {
+  height: 800px;
+}
+#answer-div #content {
+  float: right;
+  width: 79%;
+}
+#answer-div #content .title .box {
+  width: 450px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+#answer-div #content .title .box ol {
+  padding: 0;
+}
+#answer-div #content .title .box li {
+  list-style-type: none;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+#answer-div #content .result {
+  margin-top: 500px;
+  text-align: right;
+}
+#answer-div #content .result input {
+  width: 60px;
+}

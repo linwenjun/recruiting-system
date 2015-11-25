@@ -1,0 +1,92 @@
+#index-div section {
+  overflow: hidden;
+}
+#index-div .first-page .head {
+  padding: 0 10px;
+  height: 80px;
+  background: white;
+  overflow: hidden;
+}
+#index-div .first-page .head h1 span {
+  color: #19ABB5;
+}
+#index-div .first-page .content {
+  height: 100%;
+  background-image: url(../images/bg.jpg);
+  background-size: 100% auto;
+}
+#index-div .first-page .statement {
+  height: 100%;
+  margin: 0 auto;
+  width: 1000px;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+#index-div .first-page .statement h2,
+#index-div .first-page .statement h3 {
+  color: #FFF;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 3em;
+}
+#index-div .first-page .statement h2 {
+  font-size: 4em;
+  margin: 4em 0 1em 0;
+}
+#index-div .first-page .statement h3 {
+  width: 600px;
+}
+#index-div .first-page .statement a.btn {
+  display: block;
+  margin: 0 auto;
+  width: 16em;
+}
+#index-div .second-page {
+  padding-top: 40px;
+  color: #19ABB5;
+}
+#index-div .second-page .glyphicon {
+  font-size: 60px;
+}
+#index-div .second-page h2,
+#index-div .second-page h3,
+#index-div .second-page h4,
+#index-div .second-page h5 {
+  font-weight: normal;
+  line-height: 1.4em;
+}
+#index-div .second-page .row {
+  margin-top: 15px;
+}
+#index-div .third-page h1 {
+  margin: 75px 0;
+}
+#index-div .third-page .content {
+  background: #B39408;
+  height: 100%;
+}
+#index-div .third-page .left-avatar,
+#index-div .third-page .right-avatar {
+  margin: 0 auto;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  margin-top: 60px;
+}
+#index-div .third-page .left-avatar {
+  background-image: url(../images/wh.png);
+  background-size: 100% auto;
+}
+#index-div .third-page .right-avatar {
+  background-image: url(../images/zzh.png);
+  background-size: auto 100%;
+}
+#index-div .third-page .my-word {
+  color: #FFF;
+  font-style: italic;
+  font-size: 20px;
+  padding-top: 30px;
+}
+#index-div .third-page .my-name {
+  color: #FFF;
+}

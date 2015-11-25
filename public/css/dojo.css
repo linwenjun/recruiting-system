@@ -1,0 +1,55 @@
+#dojo-div .sidebar,
+#dojo-div .content {
+  height: 800px;
+}
+#dojo-div .sidebar {
+  float: left;
+  width: 15%;
+  border: 1px solid #ddd;
+}
+#dojo-div .sidebar ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+#dojo-div .sidebar li {
+  padding-left: 20px;
+  line-height: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  overflow: hidden;
+}
+#dojo-div .sidebar li div {
+  display: inline-block;
+  width: 60%;
+}
+#dojo-div .content {
+  float: right;
+  width: 85%;
+  overflow-y: scroll;
+}
+#dojo-div .content .tab-content p {
+  padding-top: 10px;
+  padding-left: 30px;
+}
+#dojo-div .footer {
+  float: right;
+  width: 85%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #ae96ee;
+}
+#dojo-div .footer div {
+  height: 45px;
+}
+#dojo-div .footer div .footer-style {
+  font-size: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+#dojo-div .footer div input {
+  margin-top: 8px;
+  vertical-align: middle;
+}

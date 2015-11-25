@@ -6973,33 +6973,6 @@ html {
 #index-div .third-page .my-name {
   color: #FFF;
 }
-#start-div header nav {
-  background-color: #0F9D58;
-  height: 70px;
-}
-#start-div header nav .brand {
-  display: inline-block;
-  margin-left: 70px;
-}
-#start-div header nav .brand strong {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 25px;
-  color: white;
-  line-height: 70px;
-}
-#start-div header nav .header-right {
-  float: right;
-  display: inline-block;
-  margin-right: 50px;
-}
-#start-div header nav .header-right a {
-  padding-left: 10px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: white;
-  line-height: 70px;
-  text-decoration: none;
-}
 #start-div article section p {
   text-align: center;
 }
@@ -7015,33 +6988,6 @@ html {
   text-align: center;
   width: 20%;
   margin: 0 auto;
-}
-#answer-div header nav {
-  background-color: #0F9D58;
-  height: 70px;
-}
-#answer-div header nav .brand {
-  display: inline-block;
-  margin-left: 70px;
-}
-#answer-div header nav .brand strong {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 25px;
-  color: white;
-  line-height: 70px;
-}
-#answer-div header nav .header-right {
-  float: right;
-  display: inline-block;
-  margin-right: 50px;
-}
-#answer-div header nav .header-right a {
-  padding-left: 10px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: white;
-  line-height: 70px;
-  text-decoration: none;
 }
 #answer-div #sidebar {
   float: left;
@@ -7111,33 +7057,6 @@ html {
 #answer-div #content .result input {
   width: 60px;
 }
-#progress-div header nav {
-  background-color: #0F9D58;
-  height: 70px;
-}
-#progress-div header nav .brand {
-  display: inline-block;
-  margin-left: 70px;
-}
-#progress-div header nav .brand strong {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 25px;
-  color: white;
-  line-height: 70px;
-}
-#progress-div header nav .header-right {
-  float: right;
-  display: inline-block;
-  margin-right: 50px;
-}
-#progress-div header nav .header-right a {
-  padding-left: 10px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: white;
-  line-height: 70px;
-  text-decoration: none;
-}
 #progress-div article {
   margin: 150px auto;
   width: 70%;
@@ -7161,33 +7080,6 @@ html {
 }
 #progress-div article .status .rank {
   display: inline-block;
-}
-#dojo-div header nav {
-  background-color: #0F9D58;
-  height: 70px;
-}
-#dojo-div header nav .brand {
-  display: inline-block;
-  margin-left: 70px;
-}
-#dojo-div header nav .brand strong {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 25px;
-  color: white;
-  line-height: 70px;
-}
-#dojo-div header nav .header-right {
-  float: right;
-  display: inline-block;
-  margin-right: 50px;
-}
-#dojo-div header nav .header-right a {
-  padding-left: 10px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: white;
-  line-height: 70px;
-  text-decoration: none;
 }
 #dojo-div .sidebar,
 #dojo-div .content {
@@ -7336,42 +7228,4 @@ body {
 }
 #register-div .register-form-right .third-party .third-party-entry li.other {
   background-position: -118px 0;
-}
-#head {
-  background: #0F9D58;
-  padding-top: 15px;
-}
-#head .title {
-  color: #FFF;
-}
-#head .forgot-password {
-  margin-top: 10px;
-  display: block;
-}
-#head .login {
-  margin-top: 24px;
-}
-#head label {
-  color: #FFF;
-}
-#head .tips {
-  color: #9daccb;
-}
-#main {
-  background: #edf0f5;
-}
-#main .item {
-  margin: 10px 0;
-}
-#main .main-icon {
-  font-size: 80px;
-  margin-right: 0.2em;
-  vertical-align: middle;
-  color: #0F9D58;
-}
-#main .free {
-  margin-bottom: 10px;
-}
-#main .slogan {
-  margin: 30px 0;
 }

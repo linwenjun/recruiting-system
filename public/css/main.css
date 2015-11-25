@@ -7219,6 +7219,10 @@ html {
   width: 85%;
   overflow-y: scroll;
 }
+#dojo-div .content .tab-content p {
+  padding-top: 10px;
+  padding-left: 30px;
+}
 #dojo-div .footer {
   float: right;
   width: 85%;

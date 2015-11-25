@@ -62,14 +62,24 @@
       </div>
 
       <div class="content">
-        <ul class="nav nav-tabs">
-          <li role="presentation" class="active"><a href="#">题目说明</a></li>
-          <li role="presentation"><a href="#">题目要求</a></li>
-          <li role="presentation"><a href="#">出错说明</a></li>
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#topic-definition">题目说明</a></li>
+          <li role="presentation"><a href="#topic-requirements">题目要求</a></li>
+          <li role="presentation"><a href="#error-definition">出错说明</a></li>
         </ul>
-        <p>
-            </p>
 
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="topic-definition">
+            <p>题目说明</p>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="topic-requirements">
+            <p>题目要求</p>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="error-definition">
+            <p>出错说明</p>
+          </div>
+        </div>
       </div>
 
       <div class="footer">

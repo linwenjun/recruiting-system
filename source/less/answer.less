@@ -1,11 +1,16 @@
 @import "../../node_modules/bootstrap/less/bootstrap.less";
 
 @import "common/main";
-
+body{
+  background-color: #EEEEEE;
+}
 #answer-div {
   .header-major;
+  header{
+    margin-bottom: 14px;
+  }
   #sidebar {
-    background-color: rgb(66, 132, 147);
+    background-color: #FFFFFF;
     .description {
       padding-top: 20px;
       padding-bottom: 40px;
@@ -30,19 +35,10 @@
     }
     .confirm {
       padding: 30px 10px;
-      background-color: rgb(230, 235, 20);
-      button {
-        display: block;
-        margin: 10px auto;
-        width: 150px;
-      }
     }
   }
-  #sidebar,
   #content {
-    height: 800px;
-  }
-  #content {
+    background-color: #FFFFFF;
     .title {
       .box {
         width: 450px;
@@ -63,11 +59,7 @@
       }
     }
     .result {
-      margin-top: 500px;
       text-align: right;
-      input {
-        width: 60px;
-      }
     }
   }
 }

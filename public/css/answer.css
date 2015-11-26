@@ -6751,9 +6751,15 @@ button.close {
   line-height: 70px;
   text-decoration: none;
 }
-.nopadding {
+.no-padding {
   padding: 0 !important;
   margin: 0 !important;
+}
+.no-right-padding {
+  padding-right: 0 !important;
+}
+body {
+  background-color: #EEEEEE;
 }
 #answer-div header nav {
   background-color: #0F9D58;
@@ -6782,8 +6788,11 @@ button.close {
   line-height: 70px;
   text-decoration: none;
 }
+#answer-div header {
+  margin-bottom: 14px;
+}
 #answer-div #sidebar {
-  background-color: #428493;
+  background-color: #FFFFFF;
 }
 #answer-div #sidebar .description {
   padding-top: 20px;
@@ -6809,16 +6818,9 @@ button.close {
 }
 #answer-div #sidebar .confirm {
   padding: 30px 10px;
-  background-color: #e6eb14;
 }
-#answer-div #sidebar .confirm button {
-  display: block;
-  margin: 10px auto;
-  width: 150px;
-}
-#answer-div #sidebar,
 #answer-div #content {
-  height: 800px;
+  background-color: #FFFFFF;
 }
 #answer-div #content .title .box {
   width: 450px;
@@ -6838,9 +6840,5 @@ button.close {
   border: 1px solid black;
 }
 #answer-div #content .result {
-  margin-top: 500px;
   text-align: right;
-}
-#answer-div #content .result input {
-  width: 60px;
 }

@@ -26,40 +26,50 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-9">
+      <div class="col-md-9 no-right-padding" >
         <div id="content">
-          <div class="title">
-            <div class="box">
-              <ol>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li>10</li>
-              </ol>
-            </div>
+        <div class="title">
+          <div class="box">
+            <ol>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+              <li>10</li>
+            </ol>
           </div>
+        </div>
 
-          <div class="result">
-            <form class="form-horizontal">
-              <div class="form-group">
-                <label for="inputresult" class="col-md-10 control-label">结果为：</label>
+        <div class="row">
+          <div class="col-md-3">
 
-                <div class="col-md-2">
-                  <input type="text" class="form-control" id="inputresult">
-                </div>
+          </div>
+          <div class="col-md-9">
+
+          </div>
+        </div>
+
+        <div class="result">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <div class="col-sm-offset-8 col-sm-2 col-xs-6">
+                <input type="text" class="form-control" id="inputresult" placeholder="请输入结果:">
               </div>
-            </form>
-          </div>
+              <div class="col-sm-2 col-xs-6">
+                <a class="btn btn-block btn-primary">提交</a>
+              </div>
+            </div>
+          </form>
+        </div>
         </div>
       </div>
 
-      <div class="col-md-3 nopadding">
+      <div class="col-md-3 ">
         <div id="sidebar">
           <div class="description">
             <h2>逻辑题</h2>
@@ -84,9 +94,9 @@
             <button type="button" class="btn btn-warning" name="button">上一题</button>
             <button type="button" class="btn btn-warning" name="button">下一题</button>
           </div>
-
+          <hr>
           <div class="confirm">
-            <button type="button" class="btn btn-danger" name="button">交卷</button>
+            <button type="button" class="btn btn-lg btn-danger btn-block" name="button">交卷</button>
           </div>
         </div>
       </div>

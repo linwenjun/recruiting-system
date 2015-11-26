@@ -5,89 +5,98 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="public/css/answer.css">
-  
+
   <title>SSWW学院考试中心</title>
 </head>
 <body>
 
 
-  <div id="answer-div">
-    <header>
-  <nav>
-    <div class="brand">
-      <strong>思沃特训营</strong>
-    </div>
-    <div class="header-right">
-      <a href="#">个人中心</a>
-      <a href="#">退出</a>
-    </div>
-  </nav>
-</header>
-
-
-      <div id="sidebar">
-        <div class="description">
-          <h2>逻辑题</h2>
-          <ol>
-            <li>
-              请仔细阅读内容，并在规定的时间段内答完题目
-            </li>
-          </ol>
-        </div>
-
-        <div class="tip">
-          <p class="remain-time">
-            您还有90分钟
-          </p>
-          <p class="finish-rate">
-            当前第1题共10题，已完成x题
-          </p>
-        </div>
-
-        <div class="select">
-          <button type="button" class="btn btn-warning" name="button">上一题</button>
-          <button type="button" class="btn btn-warning" name="button">下一题</button>
-        </div>
-
-        <div class="confirm">
-          <button type="button" class="btn btn-danger" name="button">交卷</button>
-        </div>
+<div id="answer-div">
+  <header>
+    <nav>
+      <div class="brand">
+        <strong>思沃特训营</strong>
       </div>
+      <div class="header-right">
+        <a href="#">个人中心</a>
+        <a href="#">退出</a>
+      </div>
+    </nav>
+  </header>
 
-      <div id="content">
-        <div class="title">
-          <div class="box">
-            <ol>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-              <li>6</li>
-              <li>7</li>
-              <li>8</li>
-              <li>9</li>
-              <li>10</li>
-            </ol>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-9">
+        <div id="content">
+          <div class="title">
+            <div class="box">
+              <ol>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="result">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="inputresult" class="col-md-10 control-label">结果为：</label>
+
+                <div class="col-md-2">
+                  <input type="text" class="form-control" id="inputresult">
+                </div>
+              </div>
+            </form>
           </div>
         </div>
-
-        <div class="result">
-          <form class="form-horizontal">
-            <div class="form-group">
-              <label for="inputresult" class="col-md-10 control-label">结果为：</label>
-              <div class="col-md-2">
-                <input type="text" class="form-control" id="inputresult">
-              </div>
-            </div>
-          </form>
-        </div>
       </div>
 
+      <div class="col-md-3 nopadding">
+        <div id="sidebar">
+          <div class="description">
+            <h2>逻辑题</h2>
+            <ol>
+              <li>
+                请仔细阅读内容，并在规定的时间段内答完题目
+              </li>
+            </ol>
+          </div>
+
+          <div class="tip">
+            <p class="remain-time">
+              您还有90分钟
+            </p>
+
+            <p class="finish-rate">
+              当前第1题共10题，已完成x题
+            </p>
+          </div>
+
+          <div class="select">
+            <button type="button" class="btn btn-warning" name="button">上一题</button>
+            <button type="button" class="btn btn-warning" name="button">下一题</button>
+          </div>
+
+          <div class="confirm">
+            <button type="button" class="btn btn-danger" name="button">交卷</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <script src="./public/scripts/answer.js"></script>
+</div>
 
-  </body>
+<script src="./public/scripts/answer.js"></script>
+
+</body>
 </html>
 

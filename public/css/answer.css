@@ -6751,6 +6751,10 @@ button.close {
   line-height: 70px;
   text-decoration: none;
 }
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
 #answer-div header nav {
   background-color: #0F9D58;
   height: 70px;
@@ -6779,8 +6783,6 @@ button.close {
   text-decoration: none;
 }
 #answer-div #sidebar {
-  float: left;
-  width: 21%;
   background-color: #428493;
 }
 #answer-div #sidebar .description {
@@ -6817,10 +6819,6 @@ button.close {
 #answer-div #sidebar,
 #answer-div #content {
   height: 800px;
-}
-#answer-div #content {
-  float: right;
-  width: 79%;
 }
 #answer-div #content .title .box {
   width: 450px;

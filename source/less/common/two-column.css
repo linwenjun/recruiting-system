@@ -1,0 +1,35 @@
+.two-column {
+  .aside-right {
+    background-color: #FFF;
+    margin: 15px;
+    margin-top: 0;
+    width: 350px;
+    float: right;
+  }
+
+  .fixclear::after {
+    content: " ";
+    display: block;
+    float:none;
+    clear: both;
+  }
+
+  .article-left {
+    background-color: #FFF;
+    margin: 15px;
+    margin-right: 380px; /*350 + 15 + 15*/
+
+  }
+
+  @media (max-width: 768px) {
+    .aside-right {
+      float: none;
+      width: auto;
+      margin-top: 15px;
+    }
+
+    .article-left {
+      margin-left: 15px;
+    }
+  }  
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,47 +9,51 @@
 
   <title>SSWW学院考试中心</title>
 </head>
+
 <body>
-
-
   <div id="progress-div">
     <header>
-  <nav>
-    <div class="brand">
-      <strong>思沃特训营</strong>
-    </div>
-    <div class="header-right">
-      <a href="#">个人中心</a>
-      <a href="#">退出</a>
-    </div>
-  </nav>
-</header>
+      <nav>
+        <div class="brand">
+          <strong>思沃特训营</strong>
+        </div>
+        <div class="header-right">
+          <a href="#">个人中心</a>
+          <a href="#">退出</a>
+        </div>
+      </nav>
+    </header>
 
-
-      <article>
-        <div class="progress">
-          <div id="progress-bar" class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-            40%
+    <div class="container-fluid">
+      <div class="row">
+        <article>
+          <div class="progress">
+            <div id="progress-bar" class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+              40%
+            </div>
           </div>
-        </div>
+          <section class="status-button">
+            <div class="row">
+              <div class="goon-button col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
+                <button type="button" class="btn btn-warning btn-lg btn-block">继续</button>
+              </div>
+            </div>
+          </section>
+          <div class="row">
+            <div class="status">
+              <div class="student-number col-md-4 col-sm-4 col-xs-12">共有1234名学生在学习</div>
+              <div class="quiz-number col-md-4 col-sm-4 col-xs-12">共有1234道题目</div>
+              <div class="rank col-md-4 col-sm-4 col-xs-12">你当前的排名是:100</div>
+            </div>
+          </div>
 
-        <div class="goon-button">
-          <button type="button" class="btn btn-info btn-lg btn-block">继续</button>
-        </div>
-
-        <div class="status">
-          <div class="student-number col-md-4">共有1234名学生在学习</div>
-          <div class="quiz-number col-md-4">共有1234道题目</div>
-          <div class="rank col-md-4">你当前的排名是:100</div>
-        </div>
-
-      </article>
-      <footer>
-
-      </footer>
+        </article>
+      </div>
+    </div>
   </div>
 
-<script src="public/scripts/progress.js"></script>
-
+  <script src="public/scripts/progress.js"></script>
 </body>
+
+
 </html>

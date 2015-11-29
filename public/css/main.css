@@ -7124,10 +7124,9 @@ body {
 #progress-div article #progress-bar {
   width: 40%;
 }
-#progress-div article .goon-button {
-  text-align: center;
-  width: 20%;
-  margin: 100px auto 120px;
+#progress-div article .status-button {
+  padding-top: 150px;
+  height: 300px;
 }
 #progress-div article .status {
   text-align: center;

@@ -6973,6 +6973,40 @@ html {
 #index-div .third-page .my-name {
   color: #FFF;
 }
+.no-padding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.no-right-padding {
+  padding-right: 0 !important;
+}
+#start-div header nav {
+  background-color: #50AABE;
+  height: 70px;
+}
+#start-div header nav .brand {
+  display: inline-block;
+  margin-left: 70px;
+}
+#start-div header nav .brand strong {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  color: white;
+  line-height: 70px;
+}
+#start-div header nav .header-right {
+  float: right;
+  display: inline-block;
+  margin-right: 50px;
+}
+#start-div header nav .header-right a {
+  padding-left: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+}
 #start-div article section p {
   text-align: center;
 }
@@ -6988,13 +7022,6 @@ html {
   text-align: center;
   width: 20%;
   margin: 0 auto;
-}
-.no-padding {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-.no-right-padding {
-  padding-right: 0 !important;
 }
 body {
   background-color: #EEEEEE;

@@ -7090,6 +7090,33 @@ body {
 #answer-div #content {
   background-color: #FFFFFF;
 }
+#progress-div header nav {
+  background-color: #50AABE;
+  height: 70px;
+}
+#progress-div header nav .brand {
+  display: inline-block;
+  margin-left: 70px;
+}
+#progress-div header nav .brand strong {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  color: white;
+  line-height: 70px;
+}
+#progress-div header nav .header-right {
+  float: right;
+  display: inline-block;
+  margin-right: 50px;
+}
+#progress-div header nav .header-right a {
+  padding-left: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+}
 #progress-div article {
   margin: 150px auto;
   width: 70%;

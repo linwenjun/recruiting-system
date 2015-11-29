@@ -7141,6 +7141,33 @@ body {
 #progress-div article .status .rank {
   display: inline-block;
 }
+#dojo-div header nav {
+  background-color: #50AABE;
+  height: 70px;
+}
+#dojo-div header nav .brand {
+  display: inline-block;
+  margin-left: 70px;
+}
+#dojo-div header nav .brand strong {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  color: white;
+  line-height: 70px;
+}
+#dojo-div header nav .header-right {
+  float: right;
+  display: inline-block;
+  margin-right: 50px;
+}
+#dojo-div header nav .header-right a {
+  padding-left: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+}
 #dojo-div .sidebar,
 #dojo-div .content {
   height: 800px;

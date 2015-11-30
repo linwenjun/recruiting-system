@@ -6859,7 +6859,7 @@ html {
   background-size: 100% auto;
 }
 #index-div .first-page .statement {
-  height: 100%;
+  height: 640px;
   margin: 0 auto;
   width: 1000px;
   background: rgba(0, 0, 0, 0.5);
@@ -6932,6 +6932,10 @@ html {
 }
 #index-div .third-page .my-name {
   color: #FFF;
+}
+#index-div .copyright {
+  height: 100px;
+  line-height: 100px;
 }
 .no-padding {
   padding: 0 !important;

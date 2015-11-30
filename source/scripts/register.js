@@ -3,6 +3,7 @@ require("bootstrap");
 
 $(function(){
     $('#agreement').on('click',function(){
-        jQuery('#agreenmentModal').modal('show');
+      console.log($);
+      $('#agreementModal').modal('show');
     });
 });

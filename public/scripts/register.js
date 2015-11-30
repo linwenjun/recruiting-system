@@ -11588,10 +11588,9 @@ var $ = global.jQuery = require('jquery');
 require("bootstrap");
 
 $(function(){
-    $('.nav a').click(function (e) {
-        e.preventDefault();
-        $(this).tab('show')
-    })
+    $('#agreement').on('click',function(){
+        jQuery('#agreenmentModal').modal('show');
+    });
 });
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"bootstrap":1,"jquery":14}]},{},[15]);

@@ -6751,8 +6751,22 @@ button.close {
   line-height: 70px;
   text-decoration: none;
 }
+html,
+body {
+  height: 100%;
+}
+#index-div {
+  height: 100%;
+}
 #index-div section {
   overflow: hidden;
+}
+#index-div .first-page {
+  background-image: url(../images/bg-big.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 #index-div .first-page .head {
   padding: 0 10px;
@@ -6763,15 +6777,15 @@ button.close {
 #index-div .first-page .head h1 span {
   color: #19ABB5;
 }
-#index-div .first-page .content {
-  height: 100%;
-  background-image: url(../images/bg.jpg);
-  background-size: 100% auto;
+@media only screen and (max-width: 767px) {
+  #index-div .first-page .first-page {
+    background-image: url(../images/bg-small.jpg);
+  }
 }
 #index-div .first-page .statement {
-  height: 640px;
+  height: 650px;
   margin: 0 auto;
-  width: 1000px;
+  width: 85%;
   background: rgba(0, 0, 0, 0.5);
   overflow: hidden;
 }
@@ -6780,19 +6794,17 @@ button.close {
   color: #FFF;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 3em;
+  margin-bottom: 1.5em;
 }
 #index-div .first-page .statement h2 {
   font-size: 4em;
   margin: 4em 0 1em 0;
 }
-#index-div .first-page .statement h3 {
-  width: 600px;
-}
 #index-div .first-page .statement a.btn {
   display: block;
   margin: 0 auto;
   width: 16em;
+  margin-bottom: 1.5em;
 }
 #index-div .second-page {
   padding-top: 40px;

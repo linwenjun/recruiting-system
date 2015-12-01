@@ -1,63 +1,67 @@
 @import "../../node_modules/bootstrap/less/bootstrap.less";
-
 @import "common/color.less";
 
+html, body {
+  height: 100%;
+}
+
 #index-div {
+  height: 100%;
   section {
     overflow: hidden;
   }
 
   .first-page {
+    background-image: url(../images/bg-big.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 
-      .head {
-        padding: 0 10px;
-        height: 80px;
-        background: white;
-        overflow: hidden;
+    .head {
+      padding: 0 10px;
+      height: 80px;
+      background: white;
+      overflow: hidden;
 
-        h1 {
-          span {
-            color: @blue;
-          }
+      h1 {
+        span {
+          color: @blue;
         }
       }
+    }
 
-      .content {
-        height: 100%;
-        background-image: url(../images/bg.jpg);
-        background-size: 100% auto;
+    @media only screen and (max-width: 767px) {
+      .first-page {
+        background-image: url(../images/bg-small.jpg);
       }
+    }
+    .statement {
+      height: 650px;
+      margin: 0 auto;
+      width: 85%;
+      background: rgba(0, 0, 0, 0.5);
+      overflow: hidden;
 
-      .statement {
-        height: 640px;
+      h2, h3 {
+        color: #FFF;
         margin: 0 auto;
-        width: 1000px;
-        background: rgba(0, 0, 0, 0.5);
-        overflow: hidden;
-
-        h2, h3 {
-          color: #FFF;
-          margin: 0 auto;
-          text-align: center;
-          margin-bottom: 3em;
-        }
-
-        h2 {
-          font-size: 4em;
-          margin: 4em 0 1em 0;
-        }
-
-        h3 {
-          width: 600px;
-        }
-
-        a.btn {
-          display: block;
-          margin: 0 auto;
-          width: 16em;
-        }
+        text-align: center;
+        margin-bottom: 1.5em;
       }
 
+      h2 {
+        font-size: 4em;
+        margin: 4em 0 1em 0;
+      }
+
+      a.btn {
+        display: block;
+        margin: 0 auto;
+        width: 16em;
+        margin-bottom: 1.5em;
+      }
+    }
   }
 
   .second-page {

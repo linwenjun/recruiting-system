@@ -15,7 +15,9 @@ gulp.task('browserify', function(done) {
             var a = browserify({
               entries: [entry],
               debug: true
-            }).bundle();
+            })
+            .transform('babelify', {presets: ['es2015', 'react']})
+            .bundle();
             var file_index = entry.lastIndexOf('/')+1;
             var new_entry = entry.slice(file_index);
 

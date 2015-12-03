@@ -13,41 +13,90 @@
 <body>
 
 
-  <div id="start-div">
-    <header>
-      <nav>
-        <div class="brand">
-          <strong>思沃特训营</strong>
+<div id="start-div">
+  <header>
+    <nav>
+      <div class="brand">
+        <strong>思沃特训营</strong>
+      </div>
+      <div class="header-right">
+        <a href="account.html">个人中心</a>
+        <a href="register.html">退出</a>
+      </div>
+    </nav>
+  </header>
+  <div class="container-fluid">
+    <article>
+      <section class="title">
+        <p>逻辑题</p>
+      </section>
+      <section class="content">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">一 答题需知</div>
         </div>
-        <div class="header-right">
-          <a href="account.html">个人中心</a>
-          <a href="register.html">退出</a>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <ol>
+              <li>
+                本套逻辑题有10道小题共分为4种类型
+              </li>
+              <li>
+                您共有90分钟时间，请认真答题
+              </li>
+              <li>
+                答题前，请确保网络条件畅通，无异常
+              </li>
+              <li>答题前，请仔细阅读题目要求</li>
+              <li>
+                请独立完成所有题目，禁止相互抄袭
+              </li>
+
+            </ol>
+          </div>
         </div>
-      </nav>
-    </header>
-    <div class="container-fluid">
-      <article>
-        <section class="title">
-          <p>逻辑题</p>
-        </section>
-        <section class="content">
-          <p>
-            逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题 逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题 逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题 逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题 逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题
-            逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题 逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题 逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题 逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题逻辑题
-          </p>
-        </section>
-        <section class="start-button">
-          <a href="answer.html" type="submit" class="btn btn-info btn-lg btn-block">开始</a>
-        </section>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            二 答题前,请仔细阅读以下要求
+          </div>
+        </div>
+        <div class="row">
+          <div class="checkbox col-md-4 col-md-offset-4">
+            <label>
+              <input type="checkbox"> 同意
+            </label>
+            <a id="agreement" data-toggle="modal" data-target="#agreementModal">保密协议</a>
+          </div>
+        </div>
+      </section>
+      <section class="start-button">
+        <a href="answer.html" type="submit" class="btn btn-info btn-lg btn-block">开始</a>
+      </section>
 
-      </article>
-    </div>
-
-
-
+    </article>
   </div>
-  <script src="public/scripts/start.js"></script>
+  <div class="modal fade" id="agreementModal" tabindex="-1" role="dialog" aria-labelledby="agreementLabel">
+    <div class="modal-dialog" role="document" aria-hidden="true">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                  aria-hidden="true">&times;</span></button>
+          <h3 class="modal-title" id="myModalLabel">保密协议</h3>
+        </div>
+        <div class="modal-body">
+          <b>在答题之前，请务必仔细阅读本条款并同意本协议</b><br><br>
+          第一条 除我们另有明确说明或者中国法律有强制性规定外，本网站题目属于原创的作品，本网站及作者共同享有版权，其他网站及传统媒体如需使用，须取得本网站的书面授权，未经授权严禁转载或用于其它商业用途<br><br>
+          第二条 未经本站和作者共同同意，其他任何机构不得以任何形式侵犯其作品著作权，包括但不限于，擅自复制，链接，非法使用或转载，或以任何方式建立作品镜像,一旦发现会追究当事人的责任<br><br>
 
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">确认</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="public/scripts/start.js"></script>
+</div>
 </body>
 
 </html>

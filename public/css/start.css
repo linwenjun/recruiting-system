@@ -6792,6 +6792,12 @@ button.close {
   font-size: 40px;
   margin-bottom: 30px;
 }
+#start-div article .row {
+  margin: 50px auto;
+}
+#start-div article ol li {
+  padding: 5px 0 ;
+}
 #start-div article .content p {
   width: 70%;
   margin: 0 auto 100px;

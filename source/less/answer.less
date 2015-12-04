@@ -1,26 +1,60 @@
 @import "../../node_modules/bootstrap/less/bootstrap.less";
-
+@import "common/bootstrap-patch";
 @import "common/main";
-body{
+
+body {
   background-color: #EEEEEE;
 }
+
 #answer-div {
   .header-major;
-  header{
+  header {
     margin-bottom: 14px;
   }
 
   .main {
     background-color: #FFF;
+    .box-picture {
+      height: 40px;
+      background-image: url(../images/box-example.jpg);
+      margin-bottom: 1em;
+    }
+    .left-height {
+      height: 600px;
+      overflow-y: scroll;
+    }
+    .left-flow-chart {
+      height: 800px;
+      background-image: url(../images/flowchart-example.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #464646;
+      overflow-y: scroll;
+      overflow-x: scroll;
+    }
+    .result-text {
+      line-height: 34px;
+      text-align: right;
+    }
+    .right-text {
+      height: 520px;
+      text-align: center;
+      line-height: 3em;
+    }
   }
   .sidebar {
     background-color: #FFF;
     .description {
       padding-top: 20px;
       padding-bottom: 40px;
+      text-align: center;
       h2 {
         text-align: center;
         margin-top: 0;
+      }
+      p{
+        display: inline-block;
+        margin: 5px 5px;
       }
     }
     .tip {

@@ -7120,18 +7120,6 @@ body {
   padding-top: 150px;
   height: 300px;
 }
-#progress-div article .status {
-  text-align: center;
-}
-#progress-div article .status .student-number {
-  display: inline-block;
-}
-#progress-div article .status .quiz-number {
-  display: inline-block;
-}
-#progress-div article .status .rank {
-  display: inline-block;
-}
 #dojo-div header nav {
   background-color: #50AABE;
   height: 70px;

@@ -1,13 +1,12 @@
 var gulp = require('./gulp')([
-  'browserify',
   'connect',
   'html',
   'less',
   'watch-less',
-  'watch-browserify',
+  'watchify',
   'watch'
 ]);
 
-gulp.task('build', ['less', 'browserify']);
-gulp.task('default', ['build', 'connect', 'watch', 'watch-less', 'watch-browserify'])
-gulp.task('server', ['build', 'connect', 'watch', 'watch-less', 'watch-browserify'])
+gulp.task('build', ['less', 'watchify']);
+gulp.task('default', ['build', 'connect', 'watch', 'watch-less', 'watchify'])
+gulp.task('server', ['build', 'connect', 'watch', 'watch-less', 'watchify'])

@@ -4,6 +4,6 @@ require("bootstrap");
 $(function(){
     $('.nav a').click(function (e) {
         e.preventDefault();
-        $(this).tab('show')
+        $(this).tab('show');
     })
 });

@@ -26,7 +26,8 @@ gulp.task('watchify', function(done) {
       (function(w, entry) {
         w.on('update', function() {
           var start = new Date().getTime();
-          console.log('Start fast build...')
+          console.log('Start fast build...');
+
           w.bundle()
             .pipe(source(entry))
             .pipe(rename(function(path) {
@@ -41,12 +42,6 @@ gulp.task('watchify', function(done) {
 
       return w.bundle()
         .pipe(source(entry))
-        // .pipe(buffer())
-        // .pipe(sourcemaps.init({
-        //   loadMaps: true
-        // }))
-        // .pipe(uglify())
-        // .pipe(sourcemaps.write('./'))
         .pipe(rename(function(path) {
           path.dirname = "";
         }))

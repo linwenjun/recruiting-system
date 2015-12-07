@@ -1,0 +1,31 @@
+package com.thoughtworks.twars.db;
+
+import com.thoughtworks.twars.data.UserMapper;
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+public class DBUtil {
+
+    public static SqlSession getSession() {
+        String resource = "com/thoughtworks/twars/data/mybatis-config.xml";
+        SqlSession session = null;
+
+        try {
+            InputStream is = Resources.getResourceAsStream(resource);
+            SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
+            sqlSessionFactory.getConfiguration().addMapper(UserMapper.class);
+
+            session = sqlSessionFactory.openSession();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return session;
+    }
+
+}

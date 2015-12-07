@@ -12,7 +12,6 @@ var gulpif = require('gulp-if');
 gulp.task('browserify', function(done) {
 
   var needUglify = process.env.NODE_ENV === 'production'
-  console.log(needUglify ? "true" : 'false');
   glob('./source/scripts/*.js', function(err, files) {
     if (err) done(err);
 

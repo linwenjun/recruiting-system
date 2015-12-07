@@ -7,6 +7,8 @@ repositories {
 
 dependencies {
     // compile 'org.slf4j:slf4j-api:1.7.13'
+    compile 'mysql:mysql-connector-java:5.1.37'
+    compile 'org.mybatis:mybatis:3.3.0'
     // testCompile 'junit:junit:4.12'
 }
 
@@ -21,3 +23,9 @@ buildscript {
 }
 
 apply plugin: 'org.flywaydb.flyway'
+
+flyway {
+    url = 'jdbc:mysql://localhost:3306/web_demo'
+    user = 'root'
+    password = ''
+}

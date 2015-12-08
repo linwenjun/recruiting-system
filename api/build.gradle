@@ -24,7 +24,7 @@ buildscript {
 apply plugin: 'org.flywaydb.flyway'
 
 flyway {
-    url = 'jdbc:mysql://localhost:3306/web_demo'
-    user = 'root'
-    password = ''
+    url = 'jdbc:mysql://localhost:3306/BronzeSword'
+    user = 'BronzeSword'
+    password = '123456'
 }

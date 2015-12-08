@@ -43,3 +43,21 @@ http://localhost:8080/
 ### 注意
 
 ** public目录里的文件通过source自动生成，请勿手动修改。 **
+
+### 数据库
+
+添加database，命名为BronzeSword
+
+给mysql添加用户,用户名: BronzeSword 密码：123456
+
+```
+create user BronzeSword identified by '123456'
+```
+
+将BronzeSword的权限赋给BronzeSword用户
+
+```
+grant all privileges on BronzeSword.* to BronzeSword
+```
+
+如果你已使用其他数据库或者其他用户名，只需修改build.gradle中的user或者url中的`BronzeSword`

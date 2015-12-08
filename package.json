@@ -43,6 +43,7 @@
   "dependencies": {
     "bootstrap": "^3.3.5",
     "express": "^4.13.3",
+    "hideshowpassword": "^2.0.8",
     "jquery": "^2.1.4",
     "react": "^0.14.3"
   }

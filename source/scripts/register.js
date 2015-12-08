@@ -1,12 +1,16 @@
 var $ = global.jQuery = require('jquery');
 require("bootstrap");
+require('hideshowpassword');
 
 $(function () {
+    $('#register-password').hidePassword(true);
+
     $('#change-to-logon').on('click', function () {
         $('#register').hide();
         $('#logon').show();
         $('#register-right').hide();
         $('#logon-right').show();
+        $('#logon-password').hidePassword(true);
     });
 
     $('#change-to-register').on('click', function () {

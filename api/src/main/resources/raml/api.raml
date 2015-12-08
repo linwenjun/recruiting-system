@@ -1,0 +1,44 @@
+#%RAML 1.0
+title: TWARecurting API
+description:
+version: V1
+baseUri: http://api.bronzesword.com/
+mediaType: application/json
+types:
+  CommonResp:
+    type: object
+    properties:
+      status: number
+      [data]: object
+      message: string
+    example:
+      {
+        "status": 200,
+        "data": {
+          "name": "tom",
+          "email": "tom@gmail.com"
+        },
+        "message": ""
+      }
+  Item:
+    type: object
+    properties:
+      initBox: array
+      flowChart: string
+      instruction: array
+  Phone:
+    pattern: ^\d{11}$
+/registration:
+  post:
+    responses:
+      200:
+        body:
+          application/json:
+            type: CommonResp
+/item/{$id}:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            type: Item

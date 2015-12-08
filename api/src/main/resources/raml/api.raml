@@ -6,6 +6,7 @@ baseUri: http://api.bronzesword.com/
 mediaType: application/json
 types:
   CommonResp:
+    description: standard Response For All Request
     type: object
     properties:
       status: number
@@ -23,22 +24,36 @@ types:
   Item:
     type: object
     properties:
-      initBox: array
-      flowChart: string
-      instruction: array
+      initBox: number[]
+      flowChartImgUrl: string
+      instruction: string[]
   Phone:
     pattern: ^\d{11}$
+  RegistrationInfo:
+    type: object
+    properties:
+      useremail: string
+      phoneNumber: Phone
+      password: string
 /registration:
   post:
+    body:
+      type: RegistrationInfo
+    description: Create a new user
     responses:
       200:
         body:
           application/json:
             type: CommonResp
-/item/{$id}:
+/item/{id}:
+  uriParameters:
+    id:
+      type: integer
   get:
     responses:
       200:
         body:
           application/json:
             type: Item
+/score:
+/user-items:

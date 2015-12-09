@@ -3,57 +3,42 @@ title: TWARecurting API
 description:
 version: V1
 baseUri: http://api.bronzesword.com/
-mediaType: application/json
-types:
-  CommonResp:
-    description: standard Response For All Request
-    type: object
-    properties:
-      status: number
-      [data]: object
-      message: string
-    example:
-      {
-        "status": 200,
-        "data": {
-          "name": "tom",
-          "email": "tom@gmail.com"
+schemas:
+  - halLink: |
+      { "$schema": "http://json-schema.org/schema",
+        "type": "object",
+        "description": "a Hypertext Application Language link",
+        "properties": {
+          "name":  { "type": "string" },
+          "href":  { "type": "string" },
+          "tempated": { "type": "boolean" }
         },
-        "message": ""
+        "required": [ "href" ]
       }
-  Item:
-    type: object
-    properties:
-      initBox: number[]
-      flowChartImgUrl: string
-      instruction: string[]
-  Phone:
-    pattern: ^\d{11}$
-  RegistrationInfo:
-    type: object
-    properties:
-      useremail: string
-      phoneNumber: Phone
-      password: string
-/registration:
+/register:
   post:
-    body:
-      type: RegistrationInfo
-    description: Create a new user
     responses:
       200:
         body:
           application/json:
-            type: CommonResp
-/item/{id}:
-  uriParameters:
-    id:
-      type: integer
+            properties:
+              id: integer
+              user: halLink
+/user/{id}:
   get:
+/userInfo/{id}:
+  get:
+  put:
+/subject/{id}:
+  description: A logic exam subject
+  get:
+/userSubjects:
+  get:
+    queryParameters:
+      userId:
     responses:
       200:
         body:
           application/json:
-            type: Item
-/score:
-/user-items:
+            properties:
+              subjects: halLink[]

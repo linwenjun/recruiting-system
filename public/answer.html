@@ -26,43 +26,43 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-9 col-sm-8">
+      <div class="col-md-9 col-sm-8 ">
         <div class="main">
-          <div class="row ">
-            <div class="col-md-8 col-md-offset-2 ">
-              <div class="box-picture">
-                盒子的图片在这
-              </div>
+          <div class="logic-title">
+            <div class="box-number">
+
+            </div>
+            <div class="box">
+
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-md-5 col-md-offset-2      left-height">
-              <div class="left-flow-chart">
+          <div class="logic-content">
 
+            <div class="left-text">
+              <img src="./images/example.png" alt="逻辑题图片">
+            </div>
+
+            <div class="right-text">
+              <div class="text-description">
+                将第x个盒子的数字加到y盒子
+              </div>
+              <div class="">
+                将第x个盒子的数字加到y盒子
               </div>
             </div>
-            <div class="col-md-5   ">
-              <div class="right-text">
-                <div class="col-md-12">
-                  将第x个盒子的数字加到y盒子
-                </div>
-                <div class="col-md-12">
-                  将第x个盒子的数字加到y盒子
-                </div>
-              </div>
-              <div class="col-md-12 ">
-                <div class="row answer-submit">
-                  <div class="col-sm-4 col-xs-4 result-text">
-                    <label for="result">结果为:</label>
-                  </div>
 
-                  <div class="col-sm-4 col-xs-4">
-                    <input type="text" class="form-control" id="result">
-                  </div>
-                  <div class="col-sm-4 col-xs-4">
-                    <button type="text" class="btn btn-danger ">提交</button>
-                  </div>
+            <div class="answer-submit">
+              <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-4 result-text">
+                  <label for="result">结果为:</label>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                  <input type="text" class="form-control" id="result">
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                  <button type="text" class="btn btn-danger ">提交</button>
                 </div>
               </div>
             </div>
@@ -75,7 +75,8 @@
         <div class="sidebar">
           <div class="description">
             <h2>逻辑题</h2>
-            <p >
+
+            <p>
               1. 请仔细阅读内容，并在规定的时间段内答完题目
             </p>
           </div>
@@ -96,7 +97,8 @@
           </div>
           <hr>
           <div class="confirm">
-            <a href="javascript:void(0)" class="btn btn-lg btn-danger btn-block" data-toggle="modal" data-target="#submitModal">交卷</a>
+            <a href="javascript:void(0)" class="btn btn-lg btn-danger btn-block" data-toggle="modal"
+               data-target="#submitModal">交卷</a>
           </div>
         </div>
 
@@ -114,6 +116,7 @@
         </div>
         <div class="modal-body">
           <b>您确定要交卷么?一旦提交将无法继续修改!</b>
+
           <div class="modal-footer">
             <a href="progress.html" class="btn btn-danger">确认提交</a>
             <a class="btn btn-default" data-dismiss="modal">关闭</a>

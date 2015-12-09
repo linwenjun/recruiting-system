@@ -14,35 +14,44 @@ body {
 
   .main {
     background-color: #FFF;
-    .box-picture {
-      height: 40px;
-      background-image: url(../images/box-example.jpg);
-      margin-bottom: 1em;
-    }
-    .left-height {
-      height: 600px;
-      overflow-y: scroll;
-    }
-    .left-flow-chart {
-      height: 500px;
-      width: 250px;
-      margin: 0 auto;
-      background-image: url(../images/example.png);
-      background-repeat: no-repeat;
+
+    .logic-content {
+      position: relative;
       background-color: #FFFFFF;
-      overflow-y: scroll;
-      overflow-x: scroll;
-    }
-    .result-text {
-      line-height: 34px;
-      text-align: right;
-    }
-    .right-text {
-      height: 520px;
-      text-align: center;
-      line-height: 3em;
+
+      .left-text {
+        height: 600px;
+        overflow-y: scroll;
+        float: left;
+        background-color: #FFFFFF;
+        img {
+          margin: 0px 50px;
+          display: inline-block;
+        }
+      }
+
+      .right-text {
+
+        text-align: center;
+        line-height: 3em;
+        float: left;
+        display: inline-block;
+        margin: 0   auto;
+        margin-left: 60px;
+      }
+
+      .result-text {
+        line-height: 34px;
+        text-align: right;
+      }
+
+      .answer-submit {
+        clear: both;
+
+      }
     }
   }
+
   .sidebar {
     background-color: #FFF;
     .description {
@@ -53,7 +62,7 @@ body {
         text-align: center;
         margin-top: 0;
       }
-      p{
+      p {
         display: inline-block;
         margin: 5px 5px;
       }

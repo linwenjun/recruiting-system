@@ -5,7 +5,6 @@ require('hideshowpassword');
 $(function() {
   // $('#register-password').hidePassword(true);
 
-
   $('.lose').hide();
   $('#change-to-logon').on('click', function() {
     $('#register').hide();
@@ -25,7 +24,6 @@ $(function() {
   $('#agreementModal').on('show.bs.modal', function() {
     $('.modal .modal-body').css('overflow-y', 'auto').css('max-height', $(window).height() * 0.7);
   });
-
 
   function resetPasswordSafe() {
     $('[name=danger]').removeClass('danger');
@@ -69,124 +67,106 @@ $(function() {
     }
   };
 
+  var flag = false;
+
+  $('.toggle').on('click', function() {
+    if (!flag) {
+      $(this).text('隐藏密码');
+      $('#register-password').attr("type", "text");
+      flag = true;
+    } else {
+      $(this).text('显示密码');
+      $('#register-password').attr("type", "password");
+      flag = false;
+    }
+  });
+
+  
   $('#register-password').bind('keyup', function() {
     var val = $(this).val();
     var level = passwordSafe.safe(val);
     passwordSafe.state($('.passport-safely'), level, ['safely-danger', 'safely-general', 'safely-safe']);
   });
 
-  var chooses = ['school', 'name', 'email', 'tel', 'password'];
+  var isTel = false;
+  $('[name=tel]').blur(function() {
+    var str = $('[name=tel]').val();
 
-  chooses.forEach(function(choose) {
-    isNull(choose);
-  });
-
-  function isNull(choose) {
-    $('[name=' + choose + ']').blur(function() {
-      if (this.value === '') {
-        $('[name=lose-' + choose + ']').show();
-      } else {
-        $('[name=lose-' + choose + ']').hide();
-      }
-    });
-  }
-  function jumpToStart(){
-    location.href="start.html"
-  }
-  document.getElementById("register-btn").addEventListener('click', function(evt) {
-    if(!checkInformation()){
-      evt.preventDefault();
-    }else {
-
-      $('#registration').modal('show');
-      $.ajax({
-        method: "post",
-        url: '/register',
-        data: $("form").serialize()
-      }).done(function(result){
-
-        if(result.status === 200){
-          $('#register-info').text('注册成功! 5秒钟后跳转至答题页');
-          window.setTimeout(jumpToStart,5000);
-        }else {
-          $('#register-info').text(result.message);
-        }
-      });
-    }
-  });
-
-  function checkInformation(){
-    var tel = $('[name=tel]').val();
-    var isTel = isRightTel(tel);
-
-    var email = $('[name=email]').val();
-    var isEmail = isRightEmail(email);
-
-    var password = $('[name=password]').val();
-    var isPassword = isRightPassword(password);
-
-    var checkbox = $('.agree-check');
-    var isChecked = isBoxChecked(checkbox);
-
-    if(isTel && isEmail && isPassword && isChecked) {
-      return true;
-    }else {
-      return false;
-    }
-  }
-
-  function isRightTel(str) {
-    var isTel = false;
     if (str === '') {
       $('[name=lose-tel]').show();
-    } else if (str.length !== 11) {
+    } else if (!isTelephone(str)) {
+      $('[name=lose-tel]').hide();
       $('[name=wrong-tel]').show();
     } else {
       $('[name=wrong-tel]').hide();
+      $('[name=lose-tel]').hide();
       isTel = true;
     }
-    return isTel;
-  }
+  });
 
-  function isRightEmail(str) {
-    var isEmail = false;
+  function isTelephone(str) {
+    var reg = /^1[3|4|5|8][0-9]\d{4,8}$/;
+    return reg.test(str);
+  }
+  var isEmail = false;
+  $('[name=email]').blur(function() {
+    var str = $('[name=email]').val();
+
     if (str === '') {
       $('[name=lose-email]').show();
     } else if (!isEmailName(str)) {
       $('[name=wrong-email]').show();
+      $('[name=lose-email]').hide();
     } else {
+      $('[name=lose-email]').hide();
       $('[name=wrong-email]').hide();
       isEmail = true;
     }
-    return isEmail;
-  }
+  });
 
   function isEmailName(str) {
     var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
     return reg.test(str);
   }
 
-  function isRightPassword(str) {
-    var isPassword = false;
+  var isPassword = false;
+  $('[name=password]').blur(function() {
+    var str = $('[name=password]').val();
+
     if (str === '') {
       $('[name=lose-password]').show();
-    } else if (str.length < 8 || str.length > 16) {
+    } else if (str.length <= 8 || str.length >= 16) {
       $('[name=wrong-password]').show();
+      $('[name=lose-password]').hide();
     } else {
+      $('[name=lose-password]').hide();
       $('[name=wrong-password]').hide();
       isPassword = true;
     }
-    return isPassword;
-  }
+  });
 
-  function isBoxChecked(checkbox) {
-    var isChecked = false;
+  var checkbox = $('.agree-check');
+  var isChecked = false;
+
+  document.getElementById("register-btn").addEventListener('click', function(evt) {
+    if (!isTel) {
+      $('[name=lose-tel]').show();
+    }
+    if (!isEmail) {
+      $('[name=lose-email]').show();
+    }
+    if (!isPassword) {
+      $('[name=lose-password]').show();
+    }
     if (!checkbox.prop("checked")) {
       alert("please agree");
     } else {
       isChecked = true;
     }
-
-    return isChecked;
-  }
+    if (isTel && isEmail && isPassword && isChecked) {
+      alert("gongxi");
+    } else {
+      evt.preventDefault();
+    }
+  });
 });

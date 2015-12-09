@@ -3,7 +3,7 @@ require("bootstrap");
 require('hideshowpassword');
 
 $(function() {
-  $('#register-password').hidePassword(true);
+  // $('#register-password').hidePassword(true);
 
 
   $('.lose').hide();

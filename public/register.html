@@ -61,7 +61,9 @@
                 </label>
                 <a id="agreement" data-toggle="modal" data-target="#agreementModal">协议</a>
               </div>
-              <a href="start.html" type="submit" id="register-btn" class="btn btn-lg btn-block btn-primary">注册</a>
+
+
+              <button type="button"  id="register-btn" class="btn btn-lg btn-block btn-primary">注册</button>
             </form>
           </div>
           <!-- 注册表单end -->
@@ -144,6 +146,31 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="modal fade" id="registration" tabindex="-1" role="dialog"
+       aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close"
+                  data-dismiss="modal" aria-hidden="true">
+            &times;
+          </button>
+          <h4 class="modal-title">
+            正在注册
+          </h4>
+        </div>
+        <div id="register-info" class="modal-body">
+          请稍等...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default"
+                  data-dismiss="modal">关闭
+          </button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
   </div>
 
   <script src="scripts/register.js"></script>

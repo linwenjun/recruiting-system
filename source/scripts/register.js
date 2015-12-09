@@ -90,8 +90,32 @@ $(function() {
       }
     });
   }
-
+  function jumpToStart(){
+    location.href="start.html"
+  }
   document.getElementById("register-btn").addEventListener('click', function(evt) {
+    if(!checkInformation()){
+      evt.preventDefault();
+    }else {
+
+      $('#registration').modal('show');
+      $.ajax({
+        method: "post",
+        url: '/register',
+        data: $("form").serialize()
+      }).done(function(result){
+
+        if(result.status === 200){
+          $('#register-info').text('注册成功! 5秒钟后跳转至答题页');
+          window.setTimeout(jumpToStart,5000);
+        }else {
+          $('#register-info').text(result.message);
+        }
+      });
+    }
+  });
+
+  function checkInformation(){
     var tel = $('[name=tel]').val();
     var isTel = isRightTel(tel);
 
@@ -105,11 +129,11 @@ $(function() {
     var isChecked = isBoxChecked(checkbox);
 
     if(isTel && isEmail && isPassword && isChecked) {
-      alert("gongxi");
+      return true;
     }else {
-      evt.preventDefault();
+      return false;
     }
-  });
+  }
 
   function isRightTel(str) {
     var isTel = false;

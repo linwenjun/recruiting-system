@@ -45,6 +45,7 @@
     "express": "^4.13.3",
     "hideshowpassword": "^2.0.8",
     "jquery": "^2.1.4",
-    "react": "^0.14.3"
+    "react": "^0.14.3",
+    "superagent": "^1.5.0"
   }
 }

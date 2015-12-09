@@ -146,7 +146,7 @@ $(function() {
     var isPassword = false;
     if (str === '') {
       $('[name=lose-password]').show();
-    } else if (str.length <= 8 || str.length >= 16) {
+    } else if (str.length < 8 || str.length > 16) {
       $('[name=wrong-password]').show();
     } else {
       $('[name=wrong-password]').hide();

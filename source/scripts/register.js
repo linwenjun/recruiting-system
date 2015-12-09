@@ -1,6 +1,6 @@
 var $ = global.jQuery = require('jquery');
 require("bootstrap");
-require('hideshowpassword');
+require('hideshowpassword');。
 
 $(function() {
   $('#register-password').hidePassword(true);
@@ -80,14 +80,13 @@ $(function() {
     isNull(choose);
   });
 
+  function isNull(choose) {
+    $('[name=' + choose + ']').blur(function() {
+      if (this.value === '') {
+        $('[name=lose-' + choose + ']').show();
+      } else {
+        $('[name=lose-' + choose + ']').hide();
+      }
+    });
+  }
 });
-
-function isNull(choose) {
-  $('[name=' + choose + ']').blur(function() {
-    if (this.value === '') {
-      $('[name=lose-' + choose + ']').show();
-    } else {
-      $('[name=lose-' + choose + ']').hide();
-    }
-  });
-}

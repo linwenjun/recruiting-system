@@ -8,10 +8,10 @@ git clone git@github.com:linwenjun/recruiting-system.git
 
 ### 配置
 
-切换gh-pages分支
+切换dev分支
 
 ```
-git checkout gh-pages
+git checkout dev
 ```
 
 安装npm依赖包

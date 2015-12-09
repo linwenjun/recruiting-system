@@ -32,6 +32,7 @@ $(function() {
     $('[name=general]').removeClass('general');
     $('[name=safe]').removeClass('safe');
   }
+
   var passwordSafe = {
     safe: function(val) {
       if (val == '') return 0;
@@ -88,5 +89,80 @@ $(function() {
         $('[name=lose-' + choose + ']').hide();
       }
     });
+  }
+
+  document.getElementById("register-btn").addEventListener('click', function(evt) {
+    var tel = $('[name=tel]').val();
+    var isTel = isRightTel(tel);
+
+    var email = $('[name=email]').val();
+    var isEmail = isRightEmail(email);
+
+    var password = $('[name=password]').val();
+    var isPassword = isRightPassword(password);
+
+    var checkbox = $('.agree-check');
+    var isChecked = isBoxChecked(checkbox);
+
+    if(isTel && isEmail && isPassword && isChecked) {
+      alert("gongxi");
+    }else {
+      evt.preventDefault();
+    }
+  });
+
+  function isRightTel(str) {
+    var isTel = false;
+    if (str === '') {
+      $('[name=lose-tel]').show();
+    } else if (str.length !== 11) {
+      $('[name=wrong-tel]').show();
+    } else {
+      $('[name=wrong-tel]').hide();
+      isTel = true;
+    }
+    return isTel;
+  }
+
+  function isRightEmail(str) {
+    var isEmail = false;
+    if (str === '') {
+      $('[name=lose-email]').show();
+    } else if (!isEmailName(str)) {
+      $('[name=wrong-email]').show();
+    } else {
+      $('[name=wrong-email]').hide();
+      isEmail = true;
+    }
+    return isEmail;
+  }
+
+  function isEmailName(str) {
+    var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+    return reg.test(str);
+  }
+
+  function isRightPassword(str) {
+    var isPassword = false;
+    if (str === '') {
+      $('[name=lose-password]').show();
+    } else if (str.length <= 8 || str.length >= 16) {
+      $('[name=wrong-password]').show();
+    } else {
+      $('[name=wrong-password]').hide();
+      isPassword = true;
+    }
+    return isPassword;
+  }
+
+  function isBoxChecked(checkbox) {
+    var isChecked = false;
+    if (!checkbox.prop("checked")) {
+      alert("please agree");
+    } else {
+      isChecked = true;
+    }
+
+    return isChecked;
   }
 });

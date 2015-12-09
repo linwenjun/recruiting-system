@@ -1,6 +1,6 @@
 var $ = global.jQuery = require('jquery');
 require("bootstrap");
-require('hideshowpassword');。
+require('hideshowpassword');
 
 $(function() {
   $('#register-password').hidePassword(true);

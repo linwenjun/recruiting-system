@@ -1,9 +1,7 @@
 var $ = global.jQuery = require('jquery');
 require("bootstrap");
-require('hideshowpassword');
 
 $(function() {
-  // $('#register-password').hidePassword(true);
 
   $('.lose').hide();
   $('#change-to-logon').on('click', function() {
@@ -81,7 +79,7 @@ $(function() {
     }
   });
 
-  
+
   $('#register-password').bind('keyup', function() {
     var val = $(this).val();
     var level = passwordSafe.safe(val);

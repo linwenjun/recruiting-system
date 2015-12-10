@@ -184,7 +184,6 @@ $(function() {
       $('[name=lose-password]').show();
     }
     if (!checkbox.prop("checked")) {
-      alert("please agree");
       $('#agree-check').modal('show');
     } else {
       isChecked = true;

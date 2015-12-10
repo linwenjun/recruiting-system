@@ -1,5 +1,5 @@
 var express = require('express');
-var router = express.Router;
+var router = express.Router();
 
 function checkRegisterInfo(registerInfo){
   var pass = true;
@@ -18,7 +18,7 @@ function checkRegisterInfo(registerInfo){
   return pass;
 }
 
-router.post('/register', function(req, res){
+router.post('/', function(req, res){
   var registerInfo = req.body;
   var result = {};
 

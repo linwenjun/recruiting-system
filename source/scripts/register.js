@@ -9,7 +9,6 @@ $(function() {
     $('#logon').show();
     $('#register-right').hide();
     $('#logon-right').show();
-    $('#logon-password').hidePassword(true);
   });
 
   $('#change-to-register').on('click', function() {

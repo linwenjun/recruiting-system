@@ -82,7 +82,7 @@ $(function() {
   $('#register-password').bind('keyup', function() {
     var val = $(this).val();
     var level = passwordSafe.safe(val);
-    
+
     passwordSafe.state($('.passport-safely'), level, ['safely-danger', 'safely-general', 'safely-safe']);
   });
 
@@ -137,7 +137,7 @@ $(function() {
 
     if (str === '') {
       $('[name=lose-password]').show();
-    } else if (str.length <= 8 || str.length >= 16) {
+    } else if (str.length < 8 || str.length > 16) {
       $('[name=wrong-password]').show();
       $('[name=lose-password]').hide();
     } else {
@@ -185,6 +185,7 @@ $(function() {
     }
     if (!checkbox.prop("checked")) {
       alert("please agree");
+      $('#agree-check').modal('show');
     } else {
       isChecked = true;
     }

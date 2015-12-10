@@ -79,14 +79,15 @@ $(function() {
     }
   });
 
-
   $('#register-password').bind('keyup', function() {
     var val = $(this).val();
     var level = passwordSafe.safe(val);
+    
     passwordSafe.state($('.passport-safely'), level, ['safely-danger', 'safely-general', 'safely-safe']);
   });
 
   var isTel = false;
+
   $('[name=tel]').blur(function() {
     var str = $('[name=tel]').val();
 
@@ -106,7 +107,9 @@ $(function() {
     var reg = /^1[3|4|5|8][0-9]\d{4,8}$/;
     return reg.test(str);
   }
+
   var isEmail = false;
+
   $('[name=email]').blur(function() {
     var str = $('[name=email]').val();
 
@@ -128,6 +131,7 @@ $(function() {
   }
 
   var isPassword = false;
+
   $('[name=password]').blur(function() {
     var str = $('[name=password]').val();
 

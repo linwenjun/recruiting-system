@@ -1,0 +1,16 @@
+#%RAML 1.0
+title: TWARecurting API
+description:
+version: V1
+baseUri: http://api.bronzesword.com/
+
+/register:
+  post:
+    responses:
+      200:
+        body:
+          application/json:
+            properties:
+              tel:string
+              email:string
+              password:string

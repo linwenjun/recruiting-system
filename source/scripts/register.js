@@ -87,17 +87,17 @@ $(function() {
 
   var isTel = false;
 
-  $('[name=tel]').blur(function() {
-    var str = $('[name=tel]').val();
+  $('[name=mobile-phone]').blur(function() {
+    var str = $('[name=mobile-phone]').val();
 
     if (str === '') {
-      $('[name=lose-tel]').show();
+      $('[name=lose-mobile-phone]').show();
     } else if (!isTelephone(str)) {
-      $('[name=lose-tel]').hide();
-      $('[name=wrong-tel]').show();
+      $('[name=lose-mobile-phone]').hide();
+      $('[name=wrong-mobile-phone]').show();
     } else {
-      $('[name=wrong-tel]').hide();
-      $('[name=lose-tel]').hide();
+      $('[name=wrong-mobile-phone]').hide();
+      $('[name=lose-mobile-phone]').hide();
       isTel = true;
     }
   });
@@ -170,19 +170,20 @@ $(function() {
     });
   }
 
-  var isTelEmail = false;
-  $('[name=tel-email]').blur(function() {
-    var str = $('[name=tel-email]').val();
+  var isPhoneEmail = false;
+
+  $('[name=phone-email]').blur(function() {
+    var str = $('[name=phone-email]').val();
 
     if (str === '') {
-      $('[name=lose-tel-email]').show();
+      $('[name=lose-phone-email]').show();
     } else if (!isEmailName(str) && !isTelephone(str)) {
-      $('[name=wrong-tel-email]').show();
-      $('[name=lose-tel-email]').hide();
+      $('[name=wrong-phone-email]').show();
+      $('[name=lose-phone-email]').hide();
     } else {
-      $('[name=lose-tel-email]').hide();
-      $('[name=wrong-tel-email]').hide();
-      isTelEmail = true;
+      $('[name=lose-phone-email]').hide();
+      $('[name=wrong-phone-email]').hide();
+      isPhoneEmail = true;
     }
   });
 

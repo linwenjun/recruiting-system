@@ -188,10 +188,18 @@ $(function() {
 
   function register(){
     $('#registration').modal('show');
+    var mobilePhone = $('[name=mobile-phone]').val();
+    var email = $('[name=email]').val();
+    var password = $('[name=password]').val();
+
     $.ajax({
       method: "post",
       url: '/register',
-      data: $("form").serialize()
+      data: {
+        mobilePhone: mobilePhone,
+        email: email,
+        password: password
+      }
     }).done(function(result){
 
       if(result.status === 200){
@@ -218,7 +226,7 @@ $(function() {
 
   $("#login-btn").on('click', function(evt) {
     if (isPhoneEmail && isLoginPassword) {
-      
+
     } else {
       evt.preventDefault();
     }

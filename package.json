@@ -41,6 +41,7 @@
     "watchify": "^3.6.1"
   },
   "dependencies": {
+    "body-parser": "^1.14.1",
     "bootstrap": "^3.3.5",
     "express": "^4.13.3",
     "hideshowpassword": "^2.0.8",

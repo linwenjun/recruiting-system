@@ -23,15 +23,18 @@ router.post('/', function(req, res){
   var result = {};
 
   if (checkRegisterInfo(registerInfo)){
-    result.massage = '注册成功';
+    result.message = '注册成功';
     result.status = 200;
     result.data = '';
   }else {
-    result.massage = '注册失败,注册信息有误';
+    result.message = '注册失败,注册信息有误';
     result.status = 403;
     result.data = '';
   }
   res.send(result);
 });
 
+router.get('/', function(req, res) {
+
+});
 module.exports = router;

@@ -170,18 +170,40 @@ $(function() {
     });
   }
 
+  var isTelEmail = false;
+  $('[name=tel-email]').blur(function() {
+    var str = $('[name=tel-email]').val();
 
+    if (str === '') {
+      $('[name=lose-tel-email]').show();
+    } else if (!isEmailName(str) && !isTelephone(str)) {
+      $('[name=wrong-tel-email]').show();
+      $('[name=lose-tel-email]').hide();
+    } else {
+      $('[name=lose-tel-email]').hide();
+      $('[name=wrong-tel-email]').hide();
+      isTelEmail = true;
+    }
+  });
 
-  document.getElementById("register-btn").addEventListener('click', function(evt) {
-    if (!isTel) {
-      $('[name=lose-tel]').show();
+  var loginPassword = false;
+
+  $('[name=login-password]').blur(function() {
+    var str = $('[name=login-password]').val();
+
+    if (str === '') {
+      $('[name=lose-login-password]').show();
+    } else if (str.length < 8 || str.length > 16) {
+      $('[name=wrong-login-password]').show();
+      $('[name=lose-login-password]').hide();
+    } else {
+      $('[name=lose-login-password]').hide();
+      $('[name=wrong-login-password]').hide();
+      isLoginPassword = true;
     }
-    if (!isEmail) {
-      $('[name=lose-email]').show();
-    }
-    if (!isPassword) {
-      $('[name=lose-password]').show();
-    }
+  });
+
+  $("#register-btn").on('click', function(evt) {
     if (!checkbox.prop("checked")) {
       $('#agree-check').modal('show');
     } else {
@@ -193,4 +215,5 @@ $(function() {
       evt.preventDefault();
     }
   });
+
 });

@@ -148,28 +148,6 @@ $(function() {
 
   var checkbox = $('.agree-check');
   var isChecked = false;
-
-  function jumpToStart(){
-    location.href="start.html"
-  }
-
-  function register(){
-    $('#registration').modal('show');
-    $.ajax({
-      method: "post",
-      url: '/register',
-      data: $("form").serialize()
-    }).done(function(result){
-
-      if(result.status === 200){
-        $('#register-info').text('注册成功! 5秒钟后跳转至答题页');
-        window.setTimeout(jumpToStart,5000);
-      }else {
-        $('#register-info').text(result.message);
-      }
-    });
-  }
-
   var isPhoneEmail = false;
 
   $('[name=phone-email]').blur(function() {
@@ -204,6 +182,27 @@ $(function() {
     }
   });
 
+  function jumpToStart(){
+    location.href="start.html"
+  }
+
+  function register(){
+    $('#registration').modal('show');
+    $.ajax({
+      method: "post",
+      url: '/register',
+      data: $("form").serialize()
+    }).done(function(result){
+
+      if(result.status === 200){
+        $('#register-info').text('注册成功! 5秒钟后跳转至答题页');
+        window.setTimeout(jumpToStart,5000);
+      }else {
+        $('#register-info').text(result.message);
+      }
+    });
+  }
+
   $("#register-btn").on('click', function(evt) {
     if (!checkbox.prop("checked")) {
       $('#agree-check').modal('show');
@@ -217,4 +216,11 @@ $(function() {
     }
   });
 
+  $("#login-btn").on('click', function(evt) {
+    if (isPhoneEmail && isLoginPassword) {
+      
+    } else {
+      evt.preventDefault();
+    }
+  });
 });

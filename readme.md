@@ -48,10 +48,10 @@ http://localhost:8080/
 
 添加database，命名为BronzeSword
 
-给mysql添加用户,用户名: BronzeSword 密码：123456
+给mysql添加用户,用户名: BronzeSword 密码：12345678
 
 ```
-create user BronzeSword identified by '123456'
+create user BronzeSword identified by '12345678'
 ```
 
 将BronzeSword的权限赋给BronzeSword用户

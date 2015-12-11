@@ -26,5 +26,5 @@ apply plugin: 'org.flywaydb.flyway'
 flyway {
     url = 'jdbc:mysql://localhost:3306/BronzeSword'
     user = 'BronzeSword'
-    password = '123456'
+    password = '12345678'
 }

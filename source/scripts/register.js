@@ -201,9 +201,8 @@ $(function() {
         password: password
       }
     }).done(function(result){
-
       if(result.status === 200){
-        $('#register-info').text('注册成功! 5秒钟后跳转至答题页');
+        $('#register-info').text(result.message);
         window.setTimeout(jumpToStart,5000);
       }else {
         $('#register-info').text(result.message);

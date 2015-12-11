@@ -3,7 +3,7 @@ var router = express.Router();
 
 function checkRegisterInfo(registerInfo){
   var pass = true;
-  if (registerInfo.tel.length !== 11){
+  if (registerInfo.mobilePhone.length !== 11){
     pass = false;
   }
 

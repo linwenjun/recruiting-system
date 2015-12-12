@@ -1,5 +1,6 @@
 var $ = global.jQuery = require('jquery');
 require("bootstrap");
+var request = require("superagent");
 
 $(function() {
 
@@ -182,32 +183,31 @@ $(function() {
     }
   });
 
-  function jumpToStart(){
-    location.href="start.html"
+  function jumpToStart() {
+    location.href = "start.html"
   }
 
-  function register(){
+  function register() {
     $('#registration').modal('show');
     var mobilePhone = $('[name=mobile-phone]').val();
     var email = $('[name=email]').val();
     var password = $('[name=password]').val();
 
-    $.ajax({
-      method: "post",
-      url: '/register',
-      data: {
+    request.post('/register')
+      .set('Content-Type', 'application/json')
+      .send({
         mobilePhone: mobilePhone,
         email: email,
         password: password
-      }
-    }).done(function(result){
-      if(result.status === 200){
-        $('#register-info').text(result.message);
-        window.setTimeout(jumpToStart,5000);
-      }else {
-        $('#register-info').text(result.message);
-      }
-    });
+      })
+      .end(function(res, req) {
+        if (req.status === 200) {
+          $('#register-info').text(req.message);
+          window.setTimeout(jumpToStart, 5000);
+        } else {
+          $('#register-info').text(req.message);
+        }
+      });
   }
 
   $("#register-btn").on('click', function(evt) {

@@ -1,0 +1,132 @@
+@import "../../node_modules/bootstrap/less/bootstrap.less";
+@import "common/bootstrap-patch";
+@import "common/main";
+
+body {
+  background-color: #EEEEEE;
+}
+
+#answer-div {
+  .header-major;
+  header {
+    margin-bottom: 14px;
+  }
+
+  .main {
+    background-color: #FFF;
+
+    .logic-title {
+      .box-number {
+        strong {
+            margin-left: 20px;
+        }
+        ol {
+          list-style-type: none;
+          text-align: center;
+          padding-top: 1em;
+          margin-bottom: 0px;
+
+        }
+        li {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          margin: 0px 10px;
+        }
+      ;
+      }
+      .box {
+        ol {
+          text-align: center;
+          list-style-type: none;
+          margin-bottom: 2em;
+        }
+        .no-display{
+          background-color: #FFFFFF;
+          border:none;
+        }
+
+        li {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          margin-left: 20px;
+          border: 1px solid #000000;
+        }
+      }
+    }
+    .logic-content {
+      position: relative;
+      background-color: #FFFFFF;
+
+      .left-text {
+        height: 500px;
+        overflow-y: scroll;
+        float: left;
+        background-color: #FFFFFF;
+        img {
+          margin: 0px 50px;
+          display: inline-block;
+        }
+      }
+
+      .right-text {
+
+        text-align: center;
+        line-height: 3em;
+        float: left;
+        display: inline-block;
+        margin: 0 auto;
+        margin-left: 60px;
+      }
+
+      .result-text {
+        line-height: 34px;
+        text-align: right;
+      }
+
+      .answer-submit {
+        clear: both;
+
+      }
+    }
+  }
+
+  .sidebar {
+    background-color: #FFF;
+    .description {
+      padding-top: 20px;
+      padding-bottom: 40px;
+      text-align: center;
+      h2 {
+        text-align: center;
+        margin-top: 0;
+      }
+      p {
+        display: inline-block;
+        margin: 5px 5px;
+      }
+    }
+    .tip {
+      margin-top: 100px;
+      margin-bottom: 50px;
+      padding-top: 30px;
+      text-align: center;
+    }
+    .select {
+      margin-bottom: 40px;
+      button {
+        display: block;
+        margin: 10px auto;
+        width: 150px;
+      }
+    }
+    .confirm {
+      padding: 30px 10px;
+    }
+  }
+  #content {
+    background-color: #FFFFFF;
+  }
+}

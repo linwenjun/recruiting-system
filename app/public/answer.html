@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="css/answer.css">
+
+  <title>SSWW学院考试中心</title>
+</head>
+<body>
+
+
+<div id="answer-div">
+  <header>
+    <nav>
+      <div class="brand">
+        <strong>思沃特训营</strong>
+      </div>
+      <div class="header-right">
+        <a href="account.html">个人中心</a>
+        <a href="register.html">退出</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-9 col-sm-8 ">
+        <div class="main">
+          <div class="logic-title">
+            <div class="box-number">
+              <ol>
+                <strong>BoxNo.</strong>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+              </ol>
+            </div>
+            <div class="box">
+              <ol>
+                <li class="no-display"></li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="logic-content">
+
+            <div class="left-text">
+              <img src="./images/example.png" alt="逻辑题图片">
+            </div>
+
+            <div class="right-text">
+              <div class="text-description">
+                将第x个盒子的数字加到y盒子
+              </div>
+              <div class="">
+                将第x个盒子的数字加到y盒子
+              </div>
+            </div>
+
+            <div class="answer-submit">
+              <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-4 result-text">
+                  <label for="result">结果为:</label>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                  <input type="text" class="form-control" id="result">
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                  <button type="text" class="btn btn-danger ">提交</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-4">
+        <div class="sidebar">
+          <div class="description">
+            <h2>逻辑题</h2>
+
+            <p>
+              请仔细阅读内容，并在规定的时间段内答完题目
+            </p>
+          </div>
+
+          <div class="tip">
+            <p class="remain-time">
+              您还有90分钟
+            </p>
+
+            <p class="finish-rate">
+              当前第1题共10题，已完成x题
+            </p>
+          </div>
+
+          <div class="select">
+            <button type="button" class="btn btn-warning" name="button">上一题</button>
+            <button type="button" class="btn btn-warning" name="button">下一题</button>
+          </div>
+          <hr>
+          <div class="confirm">
+            <a href="javascript:void(0)" class="btn btn-lg btn-danger btn-block" data-toggle="modal"
+               data-target="#submitModal">交卷</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade bs-example-modal-sm" id="submitModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document" aria-hidden="true">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                  aria-hidden="true">&times;</span></button>
+          <h3 class="modal-title" id="submitModalLabel">注意!</h3>
+        </div>
+        <div class="modal-body">
+          <b>您确定要交卷么?一旦提交将无法继续修改!</b>
+
+          <div class="modal-footer">
+            <a href="progress.html" class="btn btn-danger">确认提交</a>
+            <a class="btn btn-default" data-dismiss="modal">关闭</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="./scripts/answer.js"></script>
+
+</body>
+</html>

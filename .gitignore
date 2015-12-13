@@ -129,6 +129,6 @@ gradle-app.setting
 # Cache of project
 .gradletasknamecache
 
-# 
-public/scripts
-public/css
+#
+app/public/scripts
+app/public/css

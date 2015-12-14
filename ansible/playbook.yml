@@ -1,0 +1,7 @@
+- name: Test
+  hosts: localhost
+  connection: local
+  tasks:
+        # 任务只有一个，就是安装 nginx
+  - name: Install Nginx
+    yum: name=nginx state=latest

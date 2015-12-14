@@ -1,9 +1,18 @@
 package com.thoughtworks.twars.data;
 
 import com.thoughtworks.twars.User;
-import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 public interface UserMapper {
-    @Select("Select * FROM users WHERE id = #{id}")
-    User selectUser(int id);
+
+    public int insertUser(User user);
+
+    public User getUserById(int id);
+
+    public List<User> getAllUsers();
+
+    public void updateUser(User user);
+
+    public void deleteUser(Integer id);
 }

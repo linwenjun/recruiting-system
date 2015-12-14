@@ -1,6 +1,5 @@
 package com.thoughtworks.twars.db;
 
-import com.thoughtworks.twars.data.UserMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -18,7 +17,6 @@ public class DBUtil {
         try {
             InputStream is = Resources.getResourceAsStream(resource);
             SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
-            sqlSessionFactory.getConfiguration().addMapper(UserMapper.class);
 
             session = sqlSessionFactory.openSession();
         } catch (IOException e) {

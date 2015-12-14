@@ -8,13 +8,13 @@
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/web_demo"/>
-                <property name="username" value="root"/>
-                <property name="password" value=""/>
+                <property name="url" value="jdbc:mysql://localhost:3306/BronzeSword"/>
+                <property name="username" value="BronzeSword"/>
+                <property name="password" value="12345678"/>
             </dataSource>
         </environment>
     </environments>
     <mappers>
-        <mapper resource="com/thoughtworks/twars/data/userMapper.xml"/>
+        <mapper resource="com/thoughtworks/twars/data/UserMapper.xml"/>
     </mappers>
 </configuration>

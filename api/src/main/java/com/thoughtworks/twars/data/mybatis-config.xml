@@ -14,7 +14,7 @@
             </dataSource>
         </environment>
     </environments>
-    <!--<mappers>-->
-        <!--<mapper resource="com/thoughtworks/twars/data/examMapper.xml"/>-->
-    <!--</mappers>-->
+    <mappers>
+        <mapper resource="com/thoughtworks/twars/data/userMapper.xml"/>
+    </mappers>
 </configuration>

@@ -15,6 +15,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="com/thoughtworks/twars/data/UserMapper.xml"/>
+        <mapper resource="UserMapper.xml"/>
     </mappers>
 </configuration>

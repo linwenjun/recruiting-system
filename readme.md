@@ -1,4 +1,5 @@
-## 使用说明：
+使用说明：
+----------
 
 ### clone
 
@@ -42,22 +43,23 @@ http://localhost:8080/
 
 ### 注意
 
-** public目录里的文件通过source自动生成，请勿手动修改。 **
+\** public目录里的文件通过source自动生成，请勿手动修改。 \*\*
 
 ### 数据库
 
 添加database，命名为BronzeSword
 
+CREATE DATABASE `BronzeSword` CHARACTER SET utf8 COLLATE utf8_general_ci;
+
 给mysql添加用户,用户名: BronzeSword 密码：12345678
 
 ```
-create user BronzeSword identified by '12345678'
+create user 'BronzeSword'@'localhost' identified by '12345678';
 ```
 
 将BronzeSword的权限赋给BronzeSword用户
 
 ```
-grant all privileges on BronzeSword.* to BronzeSword
+grant all privileges on BronzeSword.* to 'BronzeSword'@'localhost';
+flush privileges;
 ```
-
-如果你已使用其他数据库或者其他用户名，只需修改build.gradle中的user或者url中的`BronzeSword`

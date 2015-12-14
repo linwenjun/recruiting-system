@@ -11,8 +11,11 @@ import java.io.InputStream;
 public class DBUtil {
 
     public static SqlSession getSession() {
-        String resource = "com/thoughtworks/twars/data/mybatis-config.xml";
+        String resource = "/mybatis/mybatis-config.xml";
         SqlSession session = null;
+
+        System.out.println("===========================");
+        System.out.println(resource);
 
         try {
             InputStream is = Resources.getResourceAsStream(resource);

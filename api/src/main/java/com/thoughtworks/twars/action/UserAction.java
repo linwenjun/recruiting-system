@@ -12,16 +12,17 @@ import javax.ws.rs.core.MediaType;
 public class UserAction {
 
     UserMapper mapper;
+    SqlSession session;
 
     public UserAction() {
-        SqlSession session = DBUtil.getSession();
+        session = DBUtil.getSession();
         mapper = session.getMapper(com.thoughtworks.twars.data.UserMapper.class);
     }
 
     @GET
     @Path("/{param}")
     @Produces(MediaType.APPLICATION_JSON)
-    public User getInsert(@PathParam("param") int userId) {
+    public User getUser(@PathParam("param") int userId) {
 
         User user = mapper.getUserById(userId);
         return user;
@@ -30,8 +31,10 @@ public class UserAction {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public User getInsert(User user) {
+    public User createUser(User user) {
         mapper.insertUser(user);
+        session.commit();
+        session.close();
         return user;
     }
 }

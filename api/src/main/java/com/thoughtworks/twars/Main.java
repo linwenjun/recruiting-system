@@ -1,5 +1,6 @@
 package com.thoughtworks.twars;
 
+import com.thoughtworks.twars.bean.User;
 import com.thoughtworks.twars.data.UserMapper;
 import com.thoughtworks.twars.db.DBUtil;
 import org.apache.ibatis.session.SqlSession;

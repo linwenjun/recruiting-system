@@ -1,6 +1,6 @@
 package com.thoughtworks.twars.data;
 
-import com.thoughtworks.twars.User;
+import com.thoughtworks.twars.bean.User;
 
 import java.util.List;
 

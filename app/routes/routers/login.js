@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var request = require('superagent');
 
 function checkLoginInfo(account, password) {
   var pass = true;
@@ -22,18 +23,25 @@ function checkLoginInfo(account, password) {
 router.get('/', function(req, res) {
   var account = req.query.account;
   var password = req.query.password;
-  var result = {};
 
-  if (checkLoginInfo(account, password)) {
-
-    result.status = 201;
-    result.message = '登陆成功';
-    res.send(result);
+  if (!checkLoginInfo(account, password)) {
+    res.send({
+      message: '登录失败',
+      status: 403
+    })
   } else {
-
-    result.message = '登录失败';
-    result.status = 403;
-    res.send(result);
+    request
+      .post('http://localhost:8080/api/login')
+      .set('Content-Type', "application/json")
+      .send({
+        email: account,
+        password: password
+      })
+      .end(function(err, result) {
+        res.send({
+          status: result.status
+        });
+      })
   }
 });
 

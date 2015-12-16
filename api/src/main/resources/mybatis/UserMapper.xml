@@ -15,16 +15,6 @@
         select * from Users where mobilePhone = #{mobilePhone} LIMIT 1
     </select>
 
-    <resultMap id="UserResult" type="com.thoughtworks.twars.bean.User">
-        <id property="id" column="id"></id>
-        <result property="email" column="email"></result>
-        <result property="mobilePhone" column="mobilePhone"></result>
-    </resultMap>
-
-    <select id="getAllUsers" resultMap="UserResult">
-        select * from Users
-    </select>
-
     <insert id="insertUser" parameterType="com.thoughtworks.twars.bean.User" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO Users(email, mobilePhone, password, createDate)
         VALUES (#{email}, #{mobilePhone}, #{password}, UNIX_TIMESTAMP())

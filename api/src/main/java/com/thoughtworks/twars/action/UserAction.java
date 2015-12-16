@@ -22,10 +22,16 @@ public class UserAction extends Action{
     @GET
     @Path("/{param}")
     @Produces(MediaType.APPLICATION_JSON)
-    public User getUser(@PathParam("param") int userId) {
+    public Map getUser(@PathParam("param") int userId) {
 
         User user = userMapper.getUserById(userId);
-        return user;
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("id", user.getId());
+        map.put("email", user.getEmail());
+        map.put("mobilePhone", user.getMobilePhone());
+
+        return map;
     }
 
     @GET

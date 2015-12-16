@@ -1,5 +1,9 @@
+var $ = global.jQuery = require('jquery');
+require("bootstrap");
+var request = require("superagent");
+
 $(function() {
-  var loginPassword = false;
+  var isLoginPassword = false;
   var isPhoneEmail = false;
 
   $('[name=phone-email]').blur(function() {
@@ -48,8 +52,16 @@ $(function() {
 
   $("#login-btn").on('click', function(evt) {
     if (isPhoneEmail && isLoginPassword) {
-      $.get('/login', function(req, res) {
-
+      $.get('/login', {
+        account: $('[name=phone-email]').val(),
+        password: $('[name=login-password]').val()
+      }, function(userData) {
+        if (userData.status === 200) {
+          jumpToStart();
+        } else {
+          $('[name=login-failed]').show();
+          evt.preventDefault();
+        }
       });
     } else {
       evt.preventDefault();

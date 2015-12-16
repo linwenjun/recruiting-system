@@ -21,8 +21,12 @@ var LogicPuzzle = React.createClass({
     LogicPuzzleActions.loadItem();
   },
 
+  changeItem: function(idx) {
+    console.log(idx);
+  },
+
   render: function() {
-    return (<LogicPuzzleBoxes boxes={this.state.item.initializedBox} />)
+    return (<LogicPuzzleBoxes onChangeItem={this.changeItem} boxes={this.state.item.initializedBox} />)
   }
 })
 

@@ -52,20 +52,22 @@ $(function() {
 
   $("#login-btn").on('click', function(evt) {
     if (isPhoneEmail && isLoginPassword) {
-      $.get('/login', {
-        account: $('[name=phone-email]').val(),
-        password: $('[name=login-password]').val()
-      }, function(userData) {
-        if (userData.status === 200) {
-          jumpToStart();
-        } else {
-          $('[name=login-failed]').show();
-          evt.preventDefault();
+      request.get('/login')
+        .set('Content-Type', "application/json")
+        .send({
+          account: $('[name=phone-email]').val(),
+          password: $('[name=login-password]').val()
+        })
+        .end(function(res, req)) {
+          if (res.status === 200) {
+            jumpToStart();
+          } else {
+            $('[name=login-failed]').show();
+            evt.preventDefault();
+          }
         }
-      });
     } else {
       evt.preventDefault();
     }
   });
-
 });

@@ -72,6 +72,7 @@
           <!-- 登陆表单 -->
           <div id="logon" class="col-md-7 logon-form-container">
             <h4 class="welcome">欢迎登陆思沃学院</h4>
+            <div class="lose" name="login-failed">用户名或密码错误</div>
             <form action="">
               <div class="form-group">
                 <input class="form-control" type="text" placeholder="请输入手机或邮箱" name="phone-email"/>
@@ -83,8 +84,7 @@
                 <div class="lose" name="lose-login-password">请输入密码</div>
                 <div class="lose" name="wrong-login-password">密码错误</div>
               </div>
-              <a href="start.html" id="login-btn" type="submit" class="btn btn-lg btn-block btn-primary">登陆</a>
-
+              <button type="button" id="login-btn" class="btn btn-lg btn-block btn-primary">登陆</button>
             </form>
           </div>
           <!-- 登陆表单end -->

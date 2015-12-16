@@ -34,7 +34,4 @@ router.post('/', function(req, res){
   res.send(result);
 });
 
-router.get('/', function(req, res) {
-
-});
 module.exports = router;

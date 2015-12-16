@@ -164,11 +164,13 @@ $(function() {
         password: password
       })
       .end(function(res, req) {
+        var data = JSON.parse(req.text);
+
         if (req.status === 200) {
-          $('#register-info').text(req.message);
+          $('#register-info').text(data.message);
           window.setTimeout(jumpToStart, 5000);
         } else {
-          $('#register-info').text(req.message);
+          $('#register-info').text(data.message);
         }
       });
   }

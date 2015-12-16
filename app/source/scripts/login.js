@@ -58,14 +58,14 @@ $(function() {
           account: $('[name=phone-email]').val(),
           password: $('[name=login-password]').val()
         })
-        .end(function(res, req)) {
+        .end(function(res, req) {
           if (res.status === 200) {
             jumpToStart();
           } else {
             $('[name=login-failed]').show();
             evt.preventDefault();
           }
-        }
+        })
     } else {
       evt.preventDefault();
     }

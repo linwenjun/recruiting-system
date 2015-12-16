@@ -16,6 +16,27 @@ body {
     background-color: #FFF;
 
     #InitializedBox {
+      .logic-title {
+        .box{
+          text-align: center;
+
+          &>div {
+            margin: 7px;
+            font-weight: bold;
+            display: inline-block;
+            vertical-align: top;
+          }
+          ol {
+            padding: 0;
+            display: inline-block;
+            vertical-align: top;
+            li {
+              display: inline-block;
+            }
+          }
+        }
+      }
+
       .box-number {
         strong {
             margin-left: 20px;
@@ -49,10 +70,11 @@ body {
         li {
           display: inline-block;
           width: 30px;
-          height: 30px;
           line-height: 30px;
           margin-left: 20px;
-          border: 1px solid #000000;
+          .num {
+            border: 1px solid #000000;
+          }
         }
       }
     }
@@ -62,7 +84,6 @@ body {
 
       .left-text {
         height: 500px;
-        overflow-y: scroll;
         float: left;
         background-color: #FFFFFF;
         img {

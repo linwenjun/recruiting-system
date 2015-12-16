@@ -101,6 +101,22 @@ $(function() {
       $('[name=lose-mobile-phone]').hide();
       isTel = true;
     }
+
+    if (isTel) {
+      request.get('/register/validate-mobilePhone')
+        .set('Content-Type', 'application/json')
+        .query({
+          mobilePhone: $('[name=mobile-phone]').val()
+        })
+        .end(function(err, req) {
+          if(req.body.status === 200) {
+            $('[name=exist-mobile-phone]').show();
+          }else {
+            $('[name=exist-mobile-phone]').hide();
+          }
+
+        });
+    }
   });
 
   function isTelephone(str) {

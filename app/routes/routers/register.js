@@ -41,4 +41,24 @@ router.post('/', function(req, res) {
   }
 });
 
+router.get('/validate-mobilePhone', function(req, res) {
+  request.get('http://localhost:8080/api/user')
+    .set('Content-Type', 'application/json')
+    .query({
+      field: 'mobilePhone',
+      value: req.query.mobilePhone
+    })
+    .end(function(err, result) {
+      if(result.body.user) {
+        res.send({
+          status: 200
+        });
+      }else {
+        res.send({
+          status: 404
+        });
+      }
+    });
+});
+
 module.exports = router;

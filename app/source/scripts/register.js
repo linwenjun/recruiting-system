@@ -166,12 +166,10 @@ $(function() {
       .end(function(err, req) {
         var data = JSON.parse(req.text);
 
-        if (req.status === 200) {
-          $('#register-info').text(data.message);
+        $('#register-info').text(data.message);
+        if (data.status === 200) {
           window.setTimeout(jumpToStart, 5000);
-        } else {
-          $('#register-info').text(data.message);
-        }
+        } else {}
       });
   }
 
@@ -187,10 +185,6 @@ $(function() {
     }
     if (isTel && isEmail && isPassword && isChecked) {
       register();
-    } else {
-      evt.preventDefault();
     }
   });
-
-
 });

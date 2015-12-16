@@ -117,7 +117,7 @@ $(function() {
     }
 
     if (isTel) {
-      request.get('/register/validate-mobilePhone')
+      request.get('/register/validate-mobile-phone')
         .set('Content-Type', 'application/json')
         .query({
           mobilePhone: $mobilePhone.val()
@@ -181,21 +181,6 @@ $(function() {
     verifyPassword();
   });
 
-  var checkbox = $('.agree-check');
-  var isChecked = false;
-
-  function checkRegisterData (){
-    verifyMobilePhone();
-    verifyEmail();
-    verifyPassword();
-
-    if (!checkbox.prop("checked")) {
-      $('#agree-check').modal('show');
-    } else {
-      isChecked = true;
-    }
-  }
-
   function jumpToStart() {
     location.href = "start.html"
   }
@@ -221,6 +206,21 @@ $(function() {
           window.setTimeout(jumpToStart, 5000);
         } else {}
       });
+  }
+
+  var checkbox = $('.agree-check');
+  var isChecked = false;
+
+  function checkRegisterData (){
+    verifyMobilePhone();
+    verifyEmail();
+    verifyPassword();
+
+    if (!checkbox.prop("checked")) {
+      $('#agree-check').modal('show');
+    } else {
+      isChecked = true;
+    }
   }
 
   $("#register-btn").on('click', function() {

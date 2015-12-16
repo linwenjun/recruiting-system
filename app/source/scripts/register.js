@@ -87,15 +87,29 @@ $(function() {
   });
 
   var isTel = false;
+  var isEmail = false;
+  var isPassword = false;
 
-  $('[name=mobile-phone]').blur(function() {
-    var str = $('[name=mobile-phone]').val();
+  function isTelephone(str) {
+    var reg = /^1[3|4|5|8][0-9]\d{4,8}$/;
+    return reg.test(str) && str.toString().length === 11;
+  }
 
-    if (str === '') {
+  function isEmailName(str) {
+    var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+    return reg.test(str);
+  }
+
+  function verifyMobilePhone() {
+    var $mobilePhone = $('[name=mobile-phone]');
+
+    if ($mobilePhone.val() === '') {
       $('[name=lose-mobile-phone]').show();
-    } else if (!isTelephone(str)) {
+      isTel = false;
+    } else if (!isTelephone($mobilePhone.val())) {
       $('[name=lose-mobile-phone]').hide();
       $('[name=wrong-mobile-phone]').show();
+      isTel = false;
     } else {
       $('[name=wrong-mobile-phone]').hide();
       $('[name=lose-mobile-phone]').hide();
@@ -106,65 +120,85 @@ $(function() {
       request.get('/register/validate-mobilePhone')
         .set('Content-Type', 'application/json')
         .query({
-          mobilePhone: $('[name=mobile-phone]').val()
+          mobilePhone: $mobilePhone.val()
         })
         .end(function(err, req) {
           if(req.body.status === 200) {
             $('[name=exist-mobile-phone]').show();
+            $('[name=mobile-phone]').data('is-mobile-phone-exist', true);
           }else {
             $('[name=exist-mobile-phone]').hide();
+            $('[name=mobile-phone]').data('is-mobile-phone-exist', false);
           }
-
         });
     }
-  });
-
-  function isTelephone(str) {
-    var reg = /^1[3|4|5|8][0-9]\d{4,8}$/;
-    return reg.test(str);
   }
 
-  var isEmail = false;
-
-  $('[name=email]').blur(function() {
+  function verifyEmail() {
     var str = $('[name=email]').val();
 
     if (str === '') {
       $('[name=lose-email]').show();
+      isEmail = false;
     } else if (!isEmailName(str)) {
       $('[name=wrong-email]').show();
       $('[name=lose-email]').hide();
+      isEmail = false;
     } else {
       $('[name=lose-email]').hide();
       $('[name=wrong-email]').hide();
       isEmail = true;
     }
-  });
-
-  function isEmailName(str) {
-    var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
-    return reg.test(str);
   }
 
-  var isPassword = false;
-
-  $('[name=password]').blur(function() {
+  function verifyPassword() {
     var str = $('[name=password]').val();
 
     if (str === '') {
       $('[name=lose-password]').show();
+      isPassword = false;
     } else if (str.length < 8 || str.length > 16) {
       $('[name=wrong-password]').show();
       $('[name=lose-password]').hide();
+      isPassword = false;
     } else {
       $('[name=lose-password]').hide();
       $('[name=wrong-password]').hide();
       isPassword = true;
     }
+  }
+
+  $('[name=mobile-phone]').blur(function() {
+    verifyMobilePhone();
+  });
+
+  $('[name=email]').blur(function() {
+    verifyEmail();
+  });
+
+
+  $('[name=password]').blur(function() {
+    verifyPassword();
   });
 
   var checkbox = $('.agree-check');
   var isChecked = false;
+
+  function checkRegisterData (){
+    verifyMobilePhone();
+    verifyEmail();
+    verifyPassword();
+
+    if (!checkbox.prop("checked")) {
+      $('#agree-check').modal('show');
+    } else {
+      isChecked = true;
+    }
+  }
+
+  function jumpToStart() {
+    location.href = "start.html"
+  }
 
   function register() {
     $('#registration').modal('show');
@@ -189,17 +223,10 @@ $(function() {
       });
   }
 
-  function jumpToStart() {
-    location.href = "start.html"
-  }
-
-  $("#register-btn").on('click', function(evt) {
-    if (!checkbox.prop("checked")) {
-      $('#agree-check').modal('show');
-    } else {
-      isChecked = true;
-    }
-    if (isTel && isEmail && isPassword && isChecked) {
+  $("#register-btn").on('click', function() {
+    checkRegisterData();
+    var isMobilePhoneExist = $('[name=mobile-phone]').data('is-mobile-phone-exist');
+    if (!isMobilePhoneExist && isTel && isEmail && isPassword && isChecked) {
       register();
     }
   });

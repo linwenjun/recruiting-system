@@ -11,5 +11,6 @@ public interface UserMapper {
     public User getUserByEmail(String email);
 
     public User getUserByMobilePhone(String mobilePhone);
-    
+
+    public User getUserByEmailAndPassWord(User user);
 }

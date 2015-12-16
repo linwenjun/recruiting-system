@@ -163,7 +163,7 @@ $(function() {
         email: email,
         password: password
       })
-      .end(function(res, req) {
+      .end(function(err, req) {
         var data = JSON.parse(req.text);
 
         if (req.status === 200) {

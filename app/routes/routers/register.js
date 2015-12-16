@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
+var request = require('superagent');
 
-function checkRegisterInfo(registerInfo){
+function checkRegisterInfo(registerInfo) {
   var pass = true;
-  if (registerInfo.mobilePhone.length !== 11){
+  if (registerInfo.mobilePhone.length !== 11) {
     pass = false;
   }
 
@@ -18,20 +19,26 @@ function checkRegisterInfo(registerInfo){
   return pass;
 }
 
-router.post('/', function(req, res){
+router.post('/', function(req, res) {
   var registerInfo = req.body;
-  var result = {};
 
-  if (checkRegisterInfo(registerInfo)){
-    result.message = '注册成功';
-    result.status = 200;
-    result.data = '';
-  }else {
-    result.message = '注册失败,注册信息有误';
-    result.status = 403;
-    result.data = '';
+  if (checkRegisterInfo(registerInfo)) {
+    request
+      .post('http://localhost:8080/api/register')
+      .set('Content-Type', 'application/json')
+      .send(registerInfo)
+      .end(function(err, result) {
+        res.send({
+          status: result.status,
+          message: '注册成功！5秒后跳转至答题页面。'
+        });
+      });
+  } else {
+    res.send({
+      message: '注册失败,注册信息有误',
+      status: 403
+    });
   }
-  res.send(result);
 });
 
 module.exports = router;

@@ -11,7 +11,7 @@ schemas:
         "properties": {
           "name":  { "type": "string" },
           "href":  { "type": "string" },
-          "tempated": { "type": "boolean" }
+          "tempted": {"type": "string"} }
         },
         "required": [ "href" ]
       }
@@ -30,12 +30,33 @@ schemas:
             properties:
               user: halLink
               userInfo: halLink
-/user/{id}:
+/user:
   get:
+    queryParameters:
+      field: string
+      value: string
+    responses:
+      200:
+        body:
+          application/json:
+            properties:
+              user: halLink
+  /{id}:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              properties:
+                id: integer
+                email: string
+                mobilePhone: string
+                password: string
+
 /userInfo/{id}:
   get:
   put:
-/subject/{id}:
+/logic-puzzle/{id}:
   description: A logic exam subject
   get:
 /userSubjects:

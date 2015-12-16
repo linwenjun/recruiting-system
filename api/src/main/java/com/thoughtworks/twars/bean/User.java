@@ -6,12 +6,24 @@ public class User {
     private String mobilePhone;
     private String password;
 
+    public Link getLink() {
+        return link;
+    }
+
+    public void setLink(Link link) {
+        this.link = link;
+    }
+
+    private Link link;
+
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
+        Link link = new Link("user/" + String.valueOf(id));
+        this.setLink(link);
     }
 
     public String getEmail() {

@@ -7,6 +7,14 @@
         select * from Users where id = #{id}
     </select>
 
+    <select id="getUserByEmail" resultType="com.thoughtworks.twars.bean.User">
+        select * from Users where email = #{email} LIMIT 1
+    </select>
+
+    <select id="getUserByMobilePhone" resultType="com.thoughtworks.twars.bean.User">
+        select * from Users where mobilePhone = #{mobilePhone} LIMIT 1
+    </select>
+
     <resultMap id="UserResult" type="com.thoughtworks.twars.bean.User">
         <id property="id" column="id"></id>
         <result property="email" column="email"></result>

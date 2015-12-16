@@ -1,6 +1,4 @@
 var $ = global.jQuery = require('jquery');
-var request = require('superagent');
-var React = require('react');
 var ReactDOM = require('react-dom');
 require("bootstrap");
 

@@ -4,7 +4,7 @@ var _ = require('lodash');
 
 var LogicPuzzleBoxes = React.createClass({
 
-  forword: function(box) {
+  forward: function(box) {
     if('function' === typeof this.props.onChangeItem) {
       this.props.onChangeItem(_(1).range(40).value());
     }
@@ -20,7 +20,7 @@ var LogicPuzzleBoxes = React.createClass({
               return key > 0;
             }).map((box, idx) => {
               return (
-                <li key={idx} onClick={this.forword.bind(this, box)}>
+                <li key={idx} onClick={this.forward.bind(this, box)}>
                   <div>{idx+1}</div>
                   <div className="num">{box}</div>
                 </li>

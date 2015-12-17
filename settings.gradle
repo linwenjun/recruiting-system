@@ -1,0 +1,3 @@
+include 'api'
+
+rootProject.name = 'recruiting-system'

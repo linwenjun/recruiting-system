@@ -1,0 +1,5 @@
+apply plugin: 'idea'
+
+repositories {
+    jcenter()
+}

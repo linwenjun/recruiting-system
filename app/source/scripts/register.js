@@ -15,15 +15,11 @@ $(function() {
   $('#change-to-logon').on('click', function() {
     $('#register').hide();
     $('#logon').show();
-    $('#register-right').hide();
-    $('#logon-right').show();
   });
 
   $('#change-to-register').on('click', function() {
     $('#logon').hide();
     $('#register').show();
-    $('#logon-right').hide();
-    $('#register-right').show();
   });
 
   $('#agreementModal').on('show.bs.modal', function() {

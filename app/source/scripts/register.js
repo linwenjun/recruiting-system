@@ -1,10 +1,17 @@
 var $ = global.jQuery = require('jquery');
+var ReactDom = require("react-dom");
+
 require("bootstrap");
 var request = require("superagent");
 
-$(function() {
+var RegisterApp = require('./component/register-app.component');
 
-  $('.lose').hide();
+ReactDom.render(
+    <RegisterApp />,
+    document.getElementById('register-container')
+);
+
+$(function() {
   $('#change-to-logon').on('click', function() {
     $('#register').hide();
     $('#logon').show();

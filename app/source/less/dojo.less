@@ -2,14 +2,14 @@
 @import "common/main";
 
 body {
-  background-color: #EEEEEE;
+  background-color: @pale-white;
 }
 
 #dojo-div {
   .header-major;
   .sidebar,
   .content {
-    background-color: #FFFFFF;
+    background-color: @white;
     height: 600px;
     overflow-y: scroll;
   }
@@ -25,7 +25,7 @@ body {
       padding-left: 20px;
       line-height: 40px;
       height: 40px;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid @light-grey;
       font-size: 15px;
       overflow: hidden;
       div {
@@ -55,11 +55,11 @@ body {
     .nav-tabs > li.active > a:hover,
     .nav-tabs > li.active > a:focus {
       border: 1px  solid transparent;
-      border-bottom: 1px solid #dddddd;
-      background-color: #E0EAF1;
+      border-bottom: 1px solid @light-grey;
+      background-color: @light-blue;
     }
     .nav-tabs > li > a:hover{
-      background-color: #E0EAF1;
+      background-color: @light-blue;
     }
   }
 }

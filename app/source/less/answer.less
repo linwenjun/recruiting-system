@@ -3,7 +3,7 @@
 @import "common/main";
 
 body {
-  background-color: #EEEEEE;
+  background-color: @pale-white;
 }
 
 #answer-div {
@@ -13,7 +13,7 @@ body {
   }
 
   .main {
-    background-color: #FFF;
+    background-color: @white;
 
     #InitializedBox {
       .logic-title {
@@ -63,7 +63,7 @@ body {
           margin-bottom: 2em;
         }
         .no-display{
-          background-color: #FFFFFF;
+          background-color: @white;
           border:none;
         }
 
@@ -73,19 +73,19 @@ body {
           line-height: 30px;
           margin-left: 20px;
           .num {
-            border: 1px solid #000000;
+            border: 1px solid @black;
           }
         }
       }
     }
     .logic-content {
       position: relative;
-      background-color: #FFFFFF;
+      background-color: @white;
 
       .left-text {
         height: 500px;
         float: left;
-        background-color: #FFFFFF;
+        background-color: @white;
         img {
           margin: 0px 50px;
           display: inline-block;
@@ -115,7 +115,7 @@ body {
   }
 
   .sidebar {
-    background-color: #FFF;
+    background-color: @white;
     .description {
       padding-top: 20px;
       padding-bottom: 40px;
@@ -148,6 +148,6 @@ body {
     }
   }
   #content {
-    background-color: #FFFFFF;
+    background-color: @white;
   }
 }

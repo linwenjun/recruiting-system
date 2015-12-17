@@ -1,10 +1,10 @@
 @import "../../node_modules/bootstrap/less/bootstrap.less";
 @import "common/color.less";
 body {
-  background: #F5F5F5;
+  background: @nice-white;
 }
 #register-div {
-  color: #999;
+  color: @grey;
   .form-control {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -16,11 +16,11 @@ body {
     color: @blue;
   }
   .center-content {
-    background-color: #FFF;
+    background-color: @white;
   }
   .register-form-container {
     margin: 20px 0;
-    border-right: 2px solid #EEE;
+    border-right: 2px solid @pale-white;
     .welcome {
       font-weight: normal;
       color: #333;
@@ -30,12 +30,12 @@ body {
       float: right;
       width: 130px;
       height: 20px;
-      background: red;
+      background: @red;
       margin-top: -27px;
       margin-right: 10px;
       text-align: center;
       border-radius: 5%;
-      color: white;
+      color: @white;
       opacity: 0.6;
     }
     .passport-safely {
@@ -44,15 +44,15 @@ body {
       list-style: none;
 
       .danger {
-        background-color: #da4619;
+        background-color: @red;
       }
 
       .general {
-        background-color: #ff5c00;
+        background-color: @orange;
       }
 
       .safe {
-        background-color: #35b558;
+        background-color: @green;
       }
       .toggle {
         float:right;
@@ -66,8 +66,8 @@ body {
         line-height: 12px;
         font-size: 11px;
         width: 50px;
-        background: #CCC;
-        color: #FFF;
+        background: @light-grey;
+        color: @white;
         text-align: center;
       }
     }  }
@@ -84,13 +84,13 @@ body {
     }
     .third-party {
       margin-top: 45px;
-      border-top: 1px solid #EEE;
+      border-top: 1px solid @pale-white;
       text-align: center;
       .title {
         position: relative;
         top: -20px;
         display: inline-block;
-        background: #FFF;
+        background: @white;
         padding: 10px;
         text-align: center;
       }
@@ -106,7 +106,7 @@ body {
         li {
           margin: 0;
           display: inline-block;
-          background: url(../images/passport.png) #F00;
+          background: url(../images/passport.png) @red;
           background-size: 155px 106px;
           height: 38px;
           width: 38px;

@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('superagent');
+var constant = require('../../tools/back-constant.json');
 
 function checkLoginInfo(account, password) {
   var pass = true;
@@ -13,8 +14,9 @@ function checkLoginInfo(account, password) {
     pass = false;
   }
 
-  if (password.length < 8 || password.length > 16) {
-    pass = false;
+  if (password.length < constant.PASSWORD_MIN_LENGTH ||
+      password.length > constant.PASSWORD_MAX_LENGTH) {
+        pass = false;
   }
 
   return pass;
@@ -26,7 +28,7 @@ router.get('/', function(req, res) {
 
   if (!checkLoginInfo(account, password)) {
     res.send({
-      message: '登录失败',
+      message: constant.LOGIN_FAILED,
       status: 403
     })
   } else {

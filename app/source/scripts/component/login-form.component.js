@@ -2,8 +2,11 @@ var React = global.React = require('react');
 
 var LoginForm = React.createClass({
     render: function () {
+
+        var classString = "col-md-7 logon-form-container" + (this.props.isLoginState ? '' : ' hide');
+
         return (
-            <div id="logon" className="col-md-7 logon-form-container">
+            <div id="logon" className={classString}>
                 <h4 className="welcome">欢迎登陆思沃学院</h4>
                 <div className="lose" name="login-failed">用户名或密码错误</div>
                 <form action="">

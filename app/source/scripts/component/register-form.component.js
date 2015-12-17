@@ -2,8 +2,11 @@ var React = global.React = require('react');
 
 var RegisterForm = React.createClass({
     render: function () {
+
+        var classString = "col-md-7 logon-form-container" + (this.props.isLoginState ? ' hide' : '');
+
         return (
-            <div id="register" className="col-md-7 register-form-container">
+            <div id="register" className={classString}>
                 <h4 className="welcome">欢迎注册思沃学院</h4>
 
                 <form action="">

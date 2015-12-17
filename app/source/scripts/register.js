@@ -12,15 +12,6 @@ ReactDom.render(
 );
 
 $(function() {
-  $('#change-to-logon').on('click', function() {
-    $('#register').hide();
-    $('#logon').show();
-  });
-
-  $('#change-to-register').on('click', function() {
-    $('#logon').hide();
-    $('#register').show();
-  });
 
   $('#agreementModal').on('show.bs.modal', function() {
     $('.modal .modal-body').css('overflow-y', 'auto').css('max-height', $(window).height() * 0.7);

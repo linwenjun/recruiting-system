@@ -9,4 +9,5 @@ $('#submitModal').on('show.bs.modal', function () {
   $('.modal-content').css('margin-top', '230px');
 });
 
-ReactDOM.render(<LogicPuzzle/>, document.getElementById('InitializedBox'));
+ReactDOM.render(<LogicPuzzle/>, document.getElementById('logic-puzzle'));
+

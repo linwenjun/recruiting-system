@@ -9,7 +9,7 @@ var LogicPuzzleStore = Reflux.createStore({
     this.updateItem();
   },
 
-  updateItem: function(idx) {
+  updateItem: function() {
     var that = this;
     request.get('/answer')
         .set('Content-Type', 'application/json')
@@ -18,6 +18,6 @@ var LogicPuzzleStore = Reflux.createStore({
           that.trigger(res.body);
         });
   }
-})
+});
 
 module.exports = LogicPuzzleStore;

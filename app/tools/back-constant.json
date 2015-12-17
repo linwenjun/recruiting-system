@@ -4,6 +4,7 @@
   "PASSWORD_MAX_LENGTH": 16,
   "REGISTER_SUCCESS": "注册成功！5秒后跳转至答题页面。",
   "REGISTER_FAILED": "注册失败,注册信息有误。",
+  "LOGIN_FAILED": "登录失败" ,
   "SUCCESSFUL_STATUS": 200,
   "FAILING_STATUS": 404
 }

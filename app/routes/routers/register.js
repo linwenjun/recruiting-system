@@ -15,7 +15,7 @@ function checkRegisterInfo(registerInfo) {
   }
   if (registerInfo.password.length < constant.PASSWORD_MIN_LENGTH ||
       registerInfo.password.length > constant.PASSWORD_MAX_LENGTH) {
-    pass = false;
+        pass = false;
   }
   return pass;
 }

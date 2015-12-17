@@ -14,9 +14,6 @@ public class DBUtil {
         String resource = "/mybatis/mybatis-config.xml";
         SqlSession session = null;
 
-        System.out.println("===========================");
-        System.out.println(resource);
-
         try {
             InputStream is = Resources.getResourceAsStream(resource);
             SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);

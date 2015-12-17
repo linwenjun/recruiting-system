@@ -1,7 +1,7 @@
 {
   "name": "056-thoughtworks-academy-recruiting-system",
   "version": "1.0.0",
-  "description": "-\t进入条件：输入地址即可 -\t内容：一个表单，里面的必填项有手机号，邮箱，密码，验证码(手机发送)，姓名，学校，年级",
+  "description": "ThoughtWorks Academy Recruiting System",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -98,6 +98,7 @@ $(function() {
     var $mobilePhone = $('[name=mobile-phone]');
 
     if ($mobilePhone.val() === '') {
+      $('[name=wrong-mobile-phone]').hide();
       $('[name=lose-mobile-phone]').show();
       isTel = false;
     } else if (!isTelephone($mobilePhone.val())) {
@@ -132,6 +133,7 @@ $(function() {
     var str = $('[name=email]').val();
 
     if (str === '') {
+      $('[name=wrong-email]').hide();
       $('[name=lose-email]').show();
       isEmail = false;
     } else if (!isEmailName(str)) {
@@ -149,6 +151,7 @@ $(function() {
     var str = $('[name=password]').val();
 
     if (str === '') {
+      $('[name=wrong-password]').hide();
       $('[name=lose-password]').show();
       isPassword = false;
     } else if (str.length < 8 || str.length > 16) {

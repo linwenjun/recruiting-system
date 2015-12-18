@@ -165,18 +165,17 @@ $(function() {
     }
   }
 
-  $('[name=mobile-phone]').blur(function() {
-    verifyMobilePhone();
-  });
-
-  $('[name=email]').blur(function() {
-    verifyEmail();
-  });
-
-
-  $('[name=password]').blur(function() {
-    verifyPassword();
-  });
+  //$('[name=mobile-phone]').blur(function() {
+  //  verifyMobilePhone();
+  //});
+  //
+  //$('[name=email]').blur(function() {
+  //  verifyEmail();
+  //});
+  //
+  //$('[name=password]').blur(function() {
+  //  verifyPassword();
+  //});
 
   function jumpToStart() {
     location.href = "start.html"

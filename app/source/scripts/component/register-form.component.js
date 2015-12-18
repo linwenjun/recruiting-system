@@ -1,6 +1,49 @@
 var React = global.React = require('react');
+var $ = require('jquery');
+var request = require('superagent');
+
+function isTelephone(str) {
+    var reg = /^1[3|4|5|8][0-9]\d{4,8}$/;
+    return reg.test(str) && str.toString().length === 11;
+}
 
 var RegisterForm = React.createClass({
+
+    getInitialState: function() {
+        return {
+            error : ''
+        }
+    },
+
+    validate: function(event) {
+        var error;
+        var value = event.target.value;
+
+        if (value === '') {
+            error = '请输入手机号';
+        } else if (!isTelephone(value)) {
+            error = '请输入正确手机号';
+        } else {
+            error = '';
+        }
+
+        this.setState({error: error});
+
+        if (error === '') {
+            request.get('/register/validate-mobile-phone')
+              .set('Content-Type', 'application/json')
+              .query({
+                  mobilePhone: value
+              })
+              .end((err, req) => {
+                  if(req.body.status === 200) {
+                      error = '该手机号已被注册';
+                      this.setState({error: error});
+                  }
+              });
+        }
+    },
+
     render: function () {
 
         var classString = "col-md-7 logon-form-container" + (this.props.isLoginState ? ' hide' : '');
@@ -11,12 +54,10 @@ var RegisterForm = React.createClass({
 
                 <form action="">
                     <div className="form-group">
-                        <input className="form-control" type="text" placeholder="请输入手机号" name="mobile-phone"
+                        <input className="form-control" type="text" placeholder="请输入手机号" name="mobile-phone" onBlur={this.validate}
                                data-is-mobile-phone-exist="true"/>
 
-                        <div className="lose" name="lose-mobile-phone">请输入手机号</div>
-                        <div className="lose" name="wrong-mobile-phone">请输入正确手机号</div>
-                        <div className="lose" name="exist-mobile-phone">该手机号已被注册</div>
+                        <div className={"lose" + (this.state.error === '' ? ' hide' : '')}>{this.state.error}</div>
                     </div>
                     <div className="form-group">
                         <input className="form-control" type="text" placeholder="请输入邮箱" name="email"/>

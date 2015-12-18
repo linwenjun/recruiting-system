@@ -80,72 +80,14 @@ $(function() {
     passwordSafe.state($('.passport-safely'), level, ['safely-danger', 'safely-general', 'safely-safe']);
   });
 
-  var isTel = false;
-  var isEmail = false;
+
   var isPassword = false;
 
-  function isTelephone(str) {
-    var reg = /^1[3|4|5|8][0-9]\d{4,8}$/;
-    return reg.test(str) && str.toString().length === 11;
-  }
 
-  function isEmailName(str) {
-    var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
-    return reg.test(str);
-  }
 
-  function verifyMobilePhone() {
-    var $mobilePhone = $('[name=mobile-phone]');
 
-    if ($mobilePhone.val() === '') {
-      $('[name=wrong-mobile-phone]').hide();
-      $('[name=lose-mobile-phone]').show();
-      isTel = false;
-    } else if (!isTelephone($mobilePhone.val())) {
-      $('[name=lose-mobile-phone]').hide();
-      $('[name=wrong-mobile-phone]').show();
-      isTel = false;
-    } else {
-      $('[name=wrong-mobile-phone]').hide();
-      $('[name=lose-mobile-phone]').hide();
-      isTel = true;
-    }
 
-    if (isTel) {
-      request.get('/register/validate-mobile-phone')
-        .set('Content-Type', 'application/json')
-        .query({
-          mobilePhone: $mobilePhone.val()
-        })
-        .end(function(err, req) {
-          if(req.body.status === 200) {
-            $('[name=exist-mobile-phone]').show();
-            $('[name=mobile-phone]').data('is-mobile-phone-exist', true);
-          }else {
-            $('[name=exist-mobile-phone]').hide();
-            $('[name=mobile-phone]').data('is-mobile-phone-exist', false);
-          }
-        });
-    }
-  }
 
-  function verifyEmail() {
-    var str = $('[name=email]').val();
-
-    if (str === '') {
-      $('[name=wrong-email]').hide();
-      $('[name=lose-email]').show();
-      isEmail = false;
-    } else if (!isEmailName(str)) {
-      $('[name=wrong-email]').show();
-      $('[name=lose-email]').hide();
-      isEmail = false;
-    } else {
-      $('[name=lose-email]').hide();
-      $('[name=wrong-email]').hide();
-      isEmail = true;
-    }
-  }
 
   function verifyPassword() {
     var str = $('[name=password]').val();
@@ -183,7 +125,7 @@ $(function() {
 
   function register() {
     $('#registration').modal('show');
-    var mobilePhone = $('[name=mobile-phone]').val();
+    var mobilePhone = $('[name=mobilePhone]').val();
     var email = $('[name=email]').val();
     var password = $('[name=password]').val();
 
@@ -221,8 +163,7 @@ $(function() {
 
   $("#register-btn").on('click', function() {
     checkRegisterData();
-    var isMobilePhoneExist = $('[name=mobile-phone]').data('is-mobile-phone-exist');
-    if (!isMobilePhoneExist && isTel && isEmail && isPassword && isChecked) {
+    if (isPassword && isChecked) {
       register();
     }
   });

@@ -51,6 +51,7 @@
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "superagent": "^1.5.0",
+    "superagent-promise": "^1.0.3",
     "validate.js": "^0.9.0"
   }
 }

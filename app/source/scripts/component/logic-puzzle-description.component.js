@@ -4,8 +4,7 @@ var LogicPuzzleDescription = React.createClass({
 
   render: function() {
     return (
-        <div className="right-text">
-          <div className="text-description">
+        <div className="right-description">
             <ol>
               {this.props.description.filter((val) => {
                 return val != '';
@@ -17,7 +16,6 @@ var LogicPuzzleDescription = React.createClass({
                 )
               })}
             </ol>
-          </div>
         </div>
     )
   }

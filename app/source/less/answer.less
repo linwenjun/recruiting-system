@@ -15,29 +15,29 @@ body {
   #logic-puzzle {
     background-color: @white;
 
-      .logic-title {
-        .box{
-          text-align: center;
+    .logic-title {
+      .box {
+        text-align: center;
 
-          &>div {
-            margin: 7px;
-            font-weight: bold;
+        & > div {
+          margin: 7px;
+          font-weight: bold;
+          display: inline-block;
+          vertical-align: top;
+        }
+        ol {
+          padding: 0;
+          display: inline-block;
+          vertical-align: top;
+          li {
             display: inline-block;
-            vertical-align: top;
-          }
-          ol {
-            padding: 0;
-            display: inline-block;
-            vertical-align: top;
-            li {
-              display: inline-block;
-            }
           }
         }
+      }
 
       .box-number {
         strong {
-            margin-left: 20px;
+          margin-left: 20px;
         }
         ol {
           list-style-type: none;
@@ -60,9 +60,9 @@ body {
           list-style-type: none;
           margin-bottom: 2em;
         }
-        .no-display{
+        .no-display {
           background-color: @white;
-          border:none;
+          border: none;
         }
 
         li {
@@ -76,39 +76,34 @@ body {
         }
       }
     }
-    .logic-content {
-      position: relative;
+
+    .left-chart {
+      float: left;
       background-color: @white;
-
-      .left-text {
-        height: 500px;
-        float: left;
-        background-color: @white;
-        img {
-          margin: 0px 50px;
-          display: inline-block;
-        }
-      }
-
-      .right-text {
-
-        text-align: center;
-        line-height: 3em;
-        float: left;
+      overflow-y: scroll;
+      img {
+        margin: 0px 50px;
         display: inline-block;
-        margin: 0 auto;
-        margin-left: 60px;
       }
+    }
 
-      .result-text {
-        line-height: 34px;
-        text-align: right;
-      }
+    .right-description {
+      text-align: center;
+      line-height: 3em;
+      float: left;
+      display: inline-block;
+      background-color: @white;
+      margin-left: 20px;
+    }
 
-      .answer-submit {
-        clear: both;
+    .result-text {
+      line-height: 34px;
+      text-align: right;
+    }
 
-      }
+    .answer-submit {
+      clear: both;
+
     }
   }
 
@@ -145,6 +140,7 @@ body {
       padding: 30px 10px;
     }
   }
+
   #content {
     background-color: @white;
   }

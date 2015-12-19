@@ -6,6 +6,17 @@ repositories {
     jcenter()
 }
 
+sourceSets {
+    main {
+        java {
+            srcDir 'api/src/main/java'
+        }
+        resources {
+            srcDir 'api/src/main/resources'
+        }
+    }
+}
+
 idea {
     project {
         languageLevel = '1.8'
@@ -20,6 +31,7 @@ dependencies {
     compile 'com.sun.jersey:jersey-servlet:1.19'
     compile 'com.sun.jersey:jersey-core:1.19'
     compile 'com.sun.jersey:jersey-json:1.19'
+    compile 'log4j:log4j:1.2.17'
 }
 
 buildscript {

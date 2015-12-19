@@ -25,7 +25,7 @@ public class UserAction extends Action{
     public Map getUser(@PathParam("param") int userId) {
 
         User user = userMapper.getUserById(userId);
-
+        logger.error("/user/" + userId);
         Map<String, Object> map = new HashMap<>();
         map.put("id", user.getId());
         map.put("email", user.getEmail());

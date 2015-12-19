@@ -1,18 +1,5 @@
-apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'jetty'
-
-repositories {
-    jcenter()
-}
-
-
-
-idea {
-    project {
-        languageLevel = '1.8'
-    }
-}
 
 dependencies {
     compile 'mysql:mysql-connector-java:5.1.37'
@@ -22,7 +9,8 @@ dependencies {
     compile 'com.sun.jersey:jersey-servlet:1.19'
     compile 'com.sun.jersey:jersey-core:1.19'
     compile 'com.sun.jersey:jersey-json:1.19'
-    compile 'log4j:log4j:1.2.17'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.5'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.5'
 }
 
 buildscript {
@@ -40,15 +28,4 @@ flyway {
     url = 'jdbc:mysql://localhost:3306/BronzeSword'
     user = 'BronzeSword'
     password = '12345678'
-}
-
-sourceSets {
-    main {
-        java {
-            srcDir 'api/src/main/java'
-        }
-        resources {
-            srcDir 'api/src/main/resources'
-        }
-    }
 }

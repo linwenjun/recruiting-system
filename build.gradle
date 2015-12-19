@@ -1,5 +1,13 @@
 apply plugin: 'idea'
 
-repositories {
-    jcenter()
+subprojects {
+  apply plugin: 'java'
+
+  repositories {
+      jcenter()
+  }
+}
+
+project(':api') {
+  apply plugin: 'idea'
 }

@@ -6,16 +6,7 @@ repositories {
     jcenter()
 }
 
-sourceSets {
-    main {
-        java {
-            srcDir 'api/src/main/java'
-        }
-        resources {
-            srcDir 'api/src/main/resources'
-        }
-    }
-}
+
 
 idea {
     project {
@@ -49,4 +40,15 @@ flyway {
     url = 'jdbc:mysql://localhost:3306/BronzeSword'
     user = 'BronzeSword'
     password = '12345678'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'api/src/main/java'
+        }
+        resources {
+            srcDir 'api/src/main/resources'
+        }
+    }
 }

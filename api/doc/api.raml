@@ -1,0 +1,158 @@
+#%RAML 1.0
+title: TWARecurting API
+description:
+version: V1
+baseUri: http://api.bronzesword.com/
+schemas:
+  - halLink: |
+      { "$schema": "http://json-schema.org/schema",
+        "type": "object",
+        "description": "a Hypertext Application Language link",
+        "properties": {
+          "name":  { "type": "string" },
+          "href":  { "type": "string" },
+          "tempted": {"type": "string"} }
+        },
+        "required": [ "href" ]
+      }
+/register:
+  post:
+    body:
+      application/x-www-form-urlencoded:
+        properties:
+          mobilePhone: string
+          email: string
+          password: string
+    responses:
+      200:
+        body:
+          application/json:
+            properties:
+              user: halLink
+              userInfo: halLink
+              
+/users:
+  get:
+    queryParameters:
+      field: string
+      value: string
+    responses:
+      200:
+        body:
+          application/json:
+            properties:
+              uri: halLink
+  /{id}:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              properties:
+                id: integer
+                email: string
+                mobilePhone: string
+                name: string
+
+/scoresheets:
+  get:
+    description: 得到所有的成绩单
+    response:
+      200:
+        body:
+          application/json:
+            type: object[]
+            properties:
+              uri: string
+
+  post:
+    description: 提交成绩单
+    body:
+      multipart/form-data:
+        formParameters:
+          examerId: integer
+          paperId: integer
+          blankQuizSubmits: object[]
+            blankQuizId: integer
+            itemPosts: object[]
+              answer: string
+              quizItemId: integer
+          homeworkSubmits: object[]
+            homeworkQuizId: integer
+            homeworkSubmitPostHistory: object[]
+              homeworkURL: string
+              version: string
+                
+    response:
+      201:
+        body:
+          application/json:
+            type: object
+            properties:
+              uri: string
+              
+  /{scoresheetId}: 
+    get:
+      description: 获取成绩单的细节
+      response:
+        200:
+          body:
+            application/json:
+              examer: 
+                uri: string
+              paper:
+                uri: string
+              blankQuizSubmits: object[]
+                uri: string
+              homeworkSubmits: object[]
+                uri: string
+
+/papers:
+  get:
+    description: 获得所有的考卷定义
+  post:
+    description: 提交一份考卷定义，含section定义
+  /{paperId}:
+    get:
+      description: 获取一份考卷定义的细节，含section的细节
+
+/blankQuizzes:
+  get:
+    description: 获得所有的填空题定义
+  post:
+    description: 提交一份填空题定义
+
+/homeworkQuizzes:
+  get:
+    description: 获得所有的homework题目定义
+  post:
+    description: 提交一份homework题目定义
+  /{homeworkQuizId}:
+    get:
+      description: 获得一份homework题目定义的细节
+      
+/quizItems:
+  get:
+    description: 获取所有的题目项定义
+  post:
+    description: 提交一份题目项定义
+  /{quizItemId}:
+    get:
+      description: 获得一份题目项定义的细节
+      
+/userInfo/{id}:
+  get:
+  put:
+/logic-puzzle/{id}:
+  description: A logic exam subject
+  get:
+/userSubjects:
+  get:
+    queryParameters:
+      userId:
+    responses:
+      200:
+        body:
+          application/json:
+            properties:
+              subjects: halLink[]

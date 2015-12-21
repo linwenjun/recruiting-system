@@ -1,6 +1,6 @@
 package com.thoughtworks.twars.action;
 
-import com.thoughtworks.twars.db.DBUtil;
+import com.thoughtworks.twars.util.DBUtil;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

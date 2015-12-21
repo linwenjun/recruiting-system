@@ -1,4 +1,4 @@
-package com.thoughtworks.twars.db;
+package com.thoughtworks.twars.util;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;

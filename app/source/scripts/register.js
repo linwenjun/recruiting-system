@@ -121,7 +121,7 @@ $(function() {
 
   $("#register-btn").on('click', function() {
     checkRegisterData();
-    if (isPassword && isChecked) {
+    if (isChecked) {
       register();
     }
   });

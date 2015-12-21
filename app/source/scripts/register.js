@@ -80,45 +80,6 @@ $(function() {
     passwordSafe.state($('.passport-safely'), level, ['safely-danger', 'safely-general', 'safely-safe']);
   });
 
-
-  var isPassword = false;
-
-
-
-
-
-
-
-  function verifyPassword() {
-    var str = $('[name=password]').val();
-
-    if (str === '') {
-      $('[name=wrong-password]').hide();
-      $('[name=lose-password]').show();
-      isPassword = false;
-    } else if (str.length < 8 || str.length > 16) {
-      $('[name=wrong-password]').show();
-      $('[name=lose-password]').hide();
-      isPassword = false;
-    } else {
-      $('[name=lose-password]').hide();
-      $('[name=wrong-password]').hide();
-      isPassword = true;
-    }
-  }
-
-  //$('[name=mobile-phone]').blur(function() {
-  //  verifyMobilePhone();
-  //});
-  //
-  //$('[name=email]').blur(function() {
-  //  verifyEmail();
-  //});
-  //
-  //$('[name=password]').blur(function() {
-  //  verifyPassword();
-  //});
-
   function jumpToStart() {
     location.href = "start.html"
   }
@@ -150,9 +111,6 @@ $(function() {
   var isChecked = false;
 
   function checkRegisterData (){
-    verifyMobilePhone();
-    verifyEmail();
-    verifyPassword();
 
     if (!checkbox.prop("checked")) {
       $('#agree-check').modal('show');

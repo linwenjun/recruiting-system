@@ -12,7 +12,15 @@ var containers = {
         presence: {message: '^请输入手机号'},
         format: {
             pattern: /^1[3|4|5|8][0-9]\d{8}$/,
-            message: '^请输入正确的手机号'
+            message: '^请输入合法手机号'
+        }
+    },
+    password: {
+        presence: {message: "^请输入密码"},
+        length: {
+            minimum: 8,
+            maximum: 16,
+            message: "^请输入合法密码"
         }
     }
 };
@@ -33,7 +41,8 @@ var asyncContainersFunc = {
                 }
                 done({mobilePhoneError: error});
             });
-    }
+    },
+    password: function() {}
 };
 
 function getError(validateInfo, field) {
@@ -48,7 +57,8 @@ var RegisterForm = React.createClass({
         getInitialState: function () {
             return {
                 mobilePhoneError: '',
-                emailError: ''
+                emailError: '',
+                passwordError: ''
             }
         },
 
@@ -56,7 +66,6 @@ var RegisterForm = React.createClass({
             var target = event.target;
             var value = target.value;
             var name = target.name;
-
             var valObj = {};
             valObj[name] = value;
 
@@ -99,10 +108,10 @@ var RegisterForm = React.createClass({
                         </div>
                         <div className="form-group">
                             <input className="form-control" type="password" placeholder="请输入8~16位密码" name="password"
-                                   id="register-password"/>
-
-                            <div className="lose" name="lose-password">请输入密码</div>
-                            <div className="lose" name="wrong-password">请输入8-16位密码</div>
+                                   id="register-password" onBlur={this.validate}/>
+                            <div
+                                className={"lose" + (this.state.passwordError === '' ? ' hide' : '')}>{this.state.passwordError}
+                            </div>
                             <ul className="passport-safely">
                                 <li name="danger">弱</li>
                                 <li name="general">中</li>

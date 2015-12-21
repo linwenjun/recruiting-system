@@ -7,8 +7,7 @@ var LogicPuzzleActions = require('../actions/logic-puzzle-actions');
 var LogicPuzzleBoxes = require('./logic-puzzle-boxes.component');
 var LogicPuzzleChart = require('./logic-puzzle-chart.component');
 var LogicPuzzleDescription = require('./logic-puzzle-description.component');
-var LodicPuzzleAnswerSubmit = require('./logic-puzzle-answer-submit.component');
-
+var LogicPuzzleAnswerSubmit = require('./logic-puzzle-answer-submit.component');
 
 var LogicPuzzle = React.createClass({
   mixins: [Reflux.connect(LogicPuzzleStore, 'item')],
@@ -29,11 +28,12 @@ var LogicPuzzle = React.createClass({
 
   render: function () {
     return (
-        <div>
+        <div id="logic-puzzle">
           <LogicPuzzleBoxes boxes={this.state.item.initializedBox}/>
           <LogicPuzzleChart chartPath={this.state.item.chartPath}/>
           <LogicPuzzleDescription description={this.state.item.descriptionZh}/>
-          <LodicPuzzleAnswerSubmit />
+          <LogicPuzzleAnswerSubmit />
+
         </div>
     )
   }

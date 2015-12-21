@@ -3,11 +3,10 @@ var ReactDOM = require('react-dom');
 var React = require('react');
 require("bootstrap");
 
-var LogicPuzzle = require('./component/logic-puzzle.component');
+var Answer = require('./component/answer.component');
 
 $('#submitModal').on('show.bs.modal', function () {
   $('.modal-content').css('margin-top', '230px');
 });
 
-ReactDOM.render(<LogicPuzzle/>, document.getElementById('logic-puzzle'));
-
+ReactDOM.render(<Answer/>, document.getElementById('answer-react'));
